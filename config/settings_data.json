@@ -20,7 +20,7 @@
     "success_color": "#3E9D6E",
     "warning_color": "#E0A23C",
     "error_color": "#D6553F",
-    "header_background": "#FAF6F0",
+    "header_background": "#FFFFFF",
     "header_text_color": "#1A1A1A",
     "footer_background": "#1A1A1A",
     "footer_text_color": "#FAF6F0",
