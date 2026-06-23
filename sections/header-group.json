@@ -56,7 +56,7 @@
         "text_size": "text-xs",
         "navigation_mode": "scrolling",
         "scrolling_speed": 10,
-        "background": "#C9785B",
+        "background": "#c9785b",
         "background_gradient": "",
         "text_color": "#ffffff"
       }
@@ -66,9 +66,9 @@
       "settings": {
         "enable_sticky": true,
         "hide_on_scroll": false,
-        "logo": "{{shop.brand.logo}}",
+        "logo": "shopify://shop_images/IMG_3396.png",
         "logo_max_width": 120,
-        "logo_mobile_max_width": 100,
+        "logo_mobile_max_width": 155,
         "menu": "main-menu",
         "sidebar_menu": "",
         "secondary_menu": "",
