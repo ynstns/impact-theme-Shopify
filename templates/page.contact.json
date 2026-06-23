@@ -28,11 +28,11 @@
         "background": "",
         "background_gradient": "",
         "text_color": "",
-        "heading_color": "",
+        "heading_color": "#C9785B",
         "heading_gradient": "",
-        "contact_background": "",
+        "contact_background": "#FFFFFF",
         "contact_text_color": "",
-        "button_background": "",
+        "button_background": "#C9785B",
         "button_text_color": ""
       }
     }
