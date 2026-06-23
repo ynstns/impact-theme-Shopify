@@ -101,7 +101,7 @@
           "type": "text",
           "settings": {
             "title": "NOTRE MISSION",
-            "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme editor.</p>",
+            "content": "<p>Nous aidons les <strong>femmes</strong> à retrouver un ventre<br/>léger, une digestion apaisée et la liberté de<br/>se sentir bien dans leur corps — <strong>chaque jour</strong>.<br/><br/><strong>Eliora</strong> agit à la source du ballonnement —<br/>les gaz — pour les capturer et les éliminer<br/>naturellement, dès le repas.</p>",
             "enable_follow_on_shop": false
           }
         },
