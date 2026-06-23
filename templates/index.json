@@ -171,6 +171,19 @@
         "text_gradient": ""
       }
     },
+    "custom_liquid_kpzyiB": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "{% comment %} ELIORA — Bandeau \"Vu dans\" / presse {% endcomment %}\n\n<link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">\n\n<style>\n  .eliora-vudans {\n    background: #FAF6F0;\n    padding: 40px 20px;\n    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;\n    text-align: center;\n    width: 100vw;\n    margin-left: 50%;\n    transform: translateX(-50%);\n  }\n\n  .eliora-vudans__head {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    gap: 14px;\n    margin-bottom: 28px;\n  }\n\n  .eliora-vudans__line {\n    height: 1px;\n    width: 34px;\n    background: #C9785B;\n  }\n\n  .eliora-vudans__title {\n    font-size: 12px;\n    font-weight: 600;\n    letter-spacing: 0.24em;\n    text-transform: uppercase;\n    color: #1A1A1A;\n    opacity: 0.65;\n  }\n\n  .eliora-vudans__logos {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    flex-wrap: wrap;\n    gap: 0;\n  }\n\n  .eliora-vudans__logo {\n    font-size: 22px;\n    font-weight: 700;\n    color: #1A1A1A;\n    padding: 0 26px;\n    letter-spacing: 0.01em;\n    line-height: 1.3;\n    white-space: nowrap;\n  }\n\n  .eliora-vudans__logo:not(:last-child) {\n    border-right: 1px solid rgba(26, 26, 26, 0.18);\n  }\n\n  @media (max-width: 768px) {\n    .eliora-vudans { padding: 32px 16px; }\n    .eliora-vudans__logo {\n      font-size: 16px;\n      padding: 8px 16px;\n    }\n    .eliora-vudans__logo:not(:last-child) {\n      border-right: none;\n    }\n  }\n</style>\n\n<section class=\"eliora-vudans\">\n\n  <div class=\"eliora-vudans__head\">\n    <span class=\"eliora-vudans__line\"></span>\n    <span class=\"eliora-vudans__title\">Vu dans</span>\n    <span class=\"eliora-vudans__line\"></span>\n  </div>\n\n  <div class=\"eliora-vudans__logos\">\n    <span class=\"eliora-vudans__logo\">Marie Claire</span>\n    <span class=\"eliora-vudans__logo\">Le Mag de la Santé</span>\n    <span class=\"eliora-vudans__logo\">Vogue</span>\n    <span class=\"eliora-vudans__logo\">ELLE</span>\n  </div>\n\n</section>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
     "collection-list": {
       "type": "collection-list",
       "blocks": {
@@ -768,6 +781,7 @@
     "slideshow",
     "image-link-blocks",
     "scrolling-text",
+    "custom_liquid_kpzyiB",
     "collection-list",
     "featured-collection",
     "impact-text",
