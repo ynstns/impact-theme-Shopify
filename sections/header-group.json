@@ -49,12 +49,13 @@
         "message_rVPVMm",
         "message"
       ],
+      "custom_css": [],
       "settings": {
         "enable_sticky": false,
         "autoplay": false,
         "cycle_speed": 6,
-        "text_size": "text-xs",
-        "navigation_mode": "scrolling",
+        "text_size": "text-xxs",
+        "navigation_mode": "arrows",
         "scrolling_speed": 10,
         "background": "#c9785b",
         "background_gradient": "",
