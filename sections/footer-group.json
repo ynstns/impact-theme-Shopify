@@ -36,7 +36,7 @@
           "settings": {
             "menu": "footer",
             "show_menu_title": true,
-            "menu_title": "Menu"
+            "menu_title": "Informations"
           }
         },
         "links_4JGVGz": {
@@ -44,7 +44,7 @@
           "settings": {
             "menu": "footer",
             "show_menu_title": true,
-            "menu_title": "Informations"
+            "menu_title": "Politiques"
           }
         }
       },
