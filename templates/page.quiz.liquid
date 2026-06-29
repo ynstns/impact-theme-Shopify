@@ -12,16 +12,16 @@ html, body { min-height: 100vh; background: #FAF6F0; }
 body { font-family: 'Poppins', sans-serif; color: #1A1A1A; }
 
 /* HEADER */
-.eq-header { text-align: center; padding: 18px 20px; background: #FAF6F0; border-bottom: 1px solid rgba(26,26,26,0.07); }
-.eq-header img { height: 36px; width: auto; }
+.eq-header { text-align: center; padding: 22px 20px; background: #FAF6F0; border-bottom: 1px solid rgba(26,26,26,0.07); }
+.eq-header img { height: 52px; width: auto; }
 
 /* PROGRESS */
 .eq-prog-wrap { height: 3px; background: #E8DDD3; }
 .eq-prog-bar { height: 3px; background: #C9785B; transition: width 0.4s ease; width: 0%; }
-.eq-prog-label { text-align: center; font-size: 12px; color: #8A8178; padding: 6px 0; min-height: 26px; }
+.eq-prog-label { text-align: center; font-size: 12px; color: #8A8178; padding: 7px 0; min-height: 28px; }
 
 /* CONTAINER */
-.eq-box { max-width: 540px; margin: 0 auto; padding: 16px 20px 80px; }
+.eq-box { max-width: 560px; margin: 0 auto; padding: 20px 24px 80px; }
 
 /* STEPS */
 .eq-step { display: none; animation: eqFade 0.22s ease; }
@@ -29,128 +29,215 @@ body { font-family: 'Poppins', sans-serif; color: #1A1A1A; }
 @keyframes eqFade { from { opacity:0; transform:translateY(5px); } to { opacity:1; transform:translateY(0); } }
 
 /* BACK */
-.eq-back { display: inline-flex; align-items: center; gap: 6px; background: #FFFFFF; border: 1px solid rgba(26,26,26,0.12); border-radius: 50px; padding: 7px 16px; font-size: 13px; font-weight: 500; color: #1A1A1A; cursor: pointer; margin-bottom: 24px; transition: background 0.18s; -webkit-tap-highlight-color: transparent; }
+.eq-back { display: inline-flex; align-items: center; gap: 6px; background: #FFFFFF; border: 1px solid rgba(26,26,26,0.12); border-radius: 50px; padding: 8px 18px; font-size: 13px; font-weight: 500; color: #1A1A1A; cursor: pointer; margin-bottom: 26px; transition: background 0.18s; -webkit-tap-highlight-color: transparent; }
 .eq-back:hover { background: #F0E8DE; }
 .eq-back svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
 
-/* TEXT — ALL CENTERED */
+/* TEXTES CENTRÉS */
 .eq-label { font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #8A8178; margin-bottom: 12px; text-align: center; display: block; }
-.eq-title { font-size: clamp(22px, 5.5vw, 32px); font-weight: 400; line-height: 1.22; color: #1A1A1A; margin-bottom: 8px; letter-spacing: -0.02em; text-align: center; }
+.eq-title { font-size: clamp(22px, 5.5vw, 32px); font-weight: 400; line-height: 1.22; color: #1A1A1A; margin-bottom: 10px; letter-spacing: -0.02em; text-align: center; }
 .eq-title em { font-style: italic; color: #C9785B; }
-.eq-sub { font-size: 13px; color: #8A8178; line-height: 1.6; margin-bottom: 26px; font-style: italic; text-align: center; }
-.eq-hint { font-size: 12px; color: #8A8178; text-align: center; margin-bottom: 14px; font-style: italic; }
+.eq-sub { font-size: 13.5px; color: #8A8178; line-height: 1.6; margin-bottom: 28px; font-style: italic; text-align: center; }
+.eq-hint { font-size: 12px; color: #8A8178; text-align: center; margin-bottom: 16px; font-style: italic; }
 
 /* PHOTOS */
-.eq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 18px; }
-.eq-photo { position: relative; border-radius: 14px; overflow: hidden; cursor: pointer; border: 2px solid transparent; transition: border-color 0.2s, transform 0.15s; aspect-ratio: 3/4; background: #EDE6DC; -webkit-tap-highlight-color: transparent; }
+.eq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+.eq-photo { position: relative; border-radius: 14px; overflow: hidden; cursor: pointer; border: 2.5px solid transparent; transition: border-color 0.2s, transform 0.15s; aspect-ratio: 3/4; background: #EDE6DC; -webkit-tap-highlight-color: transparent; }
 .eq-photo:hover { transform: translateY(-2px); border-color: rgba(201,120,91,0.4); }
 .eq-photo.sel { border-color: #C9785B; }
 .eq-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.eq-photo-lbl { position: absolute; bottom: 0; left: 0; right: 0; padding: 30px 12px 12px; background: linear-gradient(to top, rgba(0,0,0,0.6), transparent); color: #FFF; font-size: 13.5px; font-weight: 500; text-align: center; }
+.eq-photo-lbl { position: absolute; bottom: 0; left: 0; right: 0; padding: 32px 12px 12px; background: linear-gradient(to top, rgba(0,0,0,0.6), transparent); color: #FFF; font-size: 13.5px; font-weight: 500; text-align: center; }
 
 /* UNLOCK */
-.eq-unlock { text-align: center; margin: 4px 0 18px; }
+.eq-unlock { text-align: center; margin: 6px 0 20px; }
 .eq-unlock a { font-size: 13px; font-weight: 600; color: #C9785B; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
 
 /* DOCTOR */
-.eq-doc { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border: 1px solid rgba(26,26,26,0.08); border-radius: 12px; background: #FFFFFF; margin-top: 20px; }
-.eq-doc-av { width: 44px; height: 44px; border-radius: 50%; overflow: hidden; flex-shrink: 0; }
+.eq-doc { display: flex; align-items: center; gap: 14px; padding: 14px 18px; border: 1px solid rgba(26,26,26,0.08); border-radius: 12px; background: #FFFFFF; margin-top: 22px; }
+.eq-doc-av { width: 48px; height: 48px; border-radius: 50%; overflow: hidden; flex-shrink: 0; }
 .eq-doc-av img { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; display: block; }
 .eq-doc small { font-size: 11px; color: #8A8178; display: block; }
-.eq-doc strong { font-size: 13.5px; font-weight: 700; color: #1A1A1A; display: block; }
+.eq-doc strong { font-size: 14px; font-weight: 700; color: #1A1A1A; display: block; }
 .eq-doc em { font-size: 12px; color: #8A8178; font-style: italic; }
 
 /* OPTIONS */
-.eq-opts { display: flex; flex-direction: column; gap: 10px; margin-bottom: 18px; }
-.eq-opt { background: #FFFFFF; border: 1.5px solid rgba(26,26,26,0.1); border-radius: 12px; padding: 15px 18px; cursor: pointer; font-size: 15px; font-weight: 400; color: #1A1A1A; line-height: 1.4; transition: border-color 0.18s, color 0.18s, background 0.18s; user-select: none; -webkit-tap-highlight-color: transparent; text-align: left; }
+.eq-opts { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+.eq-opt { background: #FFFFFF; border: 1.5px solid rgba(26,26,26,0.1); border-radius: 12px; padding: 16px 20px; cursor: pointer; font-size: 15px; font-weight: 400; color: #1A1A1A; line-height: 1.4; transition: border-color 0.18s, color 0.18s, background 0.18s; user-select: none; -webkit-tap-highlight-color: transparent; text-align: left; }
 .eq-opt strong { font-weight: 700; }
 .eq-opt:hover { border-color: rgba(201,120,91,0.4); }
 .eq-opt.sel { border-color: #C9785B; color: #C9785B; background: rgba(201,120,91,0.04); }
 .eq-opt.sel strong { color: #C9785B; }
 
 /* INSIGHT */
-.eq-insight { background: rgba(201,120,91,0.08); border-left: 3px solid #C9785B; border-radius: 0 10px 10px 0; padding: 15px 18px; margin: 18px 0; font-size: 13.5px; color: #4A3728; line-height: 1.65; text-align: left; }
+.eq-insight { background: rgba(201,120,91,0.08); border-left: 3px solid #C9785B; border-radius: 0 10px 10px 0; padding: 16px 18px; margin: 20px 0; font-size: 14px; color: #4A3728; line-height: 1.65; text-align: left; }
 .eq-insight strong { color: #C9785B; }
 
-/* BUTTONS — tous centrés */
-.eq-btn-wrap { display: flex; justify-content: center; margin-top: 8px; }
-.eq-btn { background: #C9785B; color: #FFFFFF; font-family: 'Poppins', sans-serif; font-size: 15px; font-weight: 600; border: none; border-radius: 50px; padding: 17px 48px; cursor: pointer; transition: background 0.2s, transform 0.15s; display: none; -webkit-tap-highlight-color: transparent; }
-.eq-btn.show { display: inline-block; }
+/* ============================================
+   BOUTON CONTINUER — STYLE MAISON LYS
+   Full width, grand, arrondi, centré
+   ============================================ */
+.eq-btn-wrap { margin-top: 12px; }
+.eq-btn {
+  display: none;
+  width: 100%;
+  background: #C9785B;
+  color: #FFFFFF;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 100px;
+  padding: 20px 32px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  text-align: center;
+  letter-spacing: 0.01em;
+  -webkit-tap-highlight-color: transparent;
+}
+.eq-btn.show { display: block; }
 .eq-btn:hover { background: #B56645; transform: translateY(-1px); }
 
-.eq-btn-solid { display: block; width: 100%; background: #C9785B; color: #FFFFFF; font-family: 'Poppins', sans-serif; font-size: 15px; font-weight: 600; border: none; border-radius: 50px; padding: 17px 28px; cursor: pointer; margin-top: 16px; transition: background 0.2s, transform 0.15s; text-align: center; }
+.eq-btn-solid {
+  display: block;
+  width: 100%;
+  background: #C9785B;
+  color: #FFFFFF;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 100px;
+  padding: 20px 32px;
+  cursor: pointer;
+  margin-top: 18px;
+  transition: background 0.2s, transform 0.15s;
+  text-align: center;
+}
 .eq-btn-solid:hover { background: #B56645; transform: translateY(-1px); }
 
-.eq-row { display: flex; gap: 10px; margin-top: 20px; justify-content: center; }
-.eq-btn-yes { flex: 1; max-width: 220px; background: #C9785B; color: #FFFFFF; font-family: 'Poppins', sans-serif; font-size: 15px; font-weight: 600; border: none; border-radius: 50px; padding: 16px 20px; cursor: pointer; transition: background 0.2s; }
-.eq-btn-no { flex: 1; max-width: 160px; background: #FFFFFF; color: #1A1A1A; font-family: 'Poppins', sans-serif; font-size: 15px; font-weight: 500; border: 1.5px solid rgba(26,26,26,0.12); border-radius: 50px; padding: 16px 20px; cursor: pointer; transition: background 0.2s; text-align: center; }
+.eq-row { display: flex; gap: 12px; margin-top: 22px; }
+.eq-btn-yes {
+  flex: 1.4;
+  background: #C9785B;
+  color: #FFFFFF;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 100px;
+  padding: 18px 20px;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-align: center;
+}
+.eq-btn-no {
+  flex: 1;
+  background: #FFFFFF;
+  color: #1A1A1A;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  border: 1.5px solid rgba(26,26,26,0.14);
+  border-radius: 100px;
+  padding: 18px 20px;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.2s;
+}
+.eq-btn-yes:hover { background: #B56645; }
+.eq-btn-no:hover { background: #F0E8DE; }
 
 /* RESTART */
-.eq-restart { text-align: center; margin-top: 28px; padding-top: 20px; border-top: 1px solid rgba(26,26,26,0.08); }
+.eq-restart { text-align: center; margin-top: 30px; padding-top: 22px; border-top: 1px solid rgba(26,26,26,0.08); }
 .eq-restart a { font-size: 13px; color: #8A8178; cursor: pointer; display: inline-flex; align-items: center; gap: 5px; }
 
 /* ÉDUCATION */
-.eq-edu-hi { font-size: 15px; font-weight: 600; color: #C9785B; line-height: 1.5; margin-bottom: 14px; text-align: left; }
-.eq-edu-p { font-size: 14.5px; color: #1A1A1A; line-height: 1.7; margin-bottom: 14px; text-align: left; }
+.eq-edu-hi { font-size: 15px; font-weight: 600; color: #C9785B; line-height: 1.5; margin-bottom: 16px; text-align: left; }
+.eq-edu-p { font-size: 14.5px; color: #1A1A1A; line-height: 1.75; margin-bottom: 16px; text-align: left; }
 .eq-edu-p strong { color: #C9785B; }
-.eq-temo-title { font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #8A8178; margin: 22px 0 10px; text-align: left; display: block; }
-.eq-temo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 20px; }
-.eq-temo-cell { aspect-ratio: 3/4; border-radius: 10px; background: #EDE6DC; overflow: hidden; }
-.eq-temo-cell img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* TÉMOIGNAGES — GRILLE CENTRÉE */
+.eq-temo-label { font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #8A8178; margin: 24px 0 12px; text-align: left; display: block; }
+.eq-temo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.eq-temo-cell {
+  aspect-ratio: 1/1;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #EDE6DC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.eq-temo-cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
 
 /* LOADER */
-.eq-loader-title { font-size: clamp(20px, 5vw, 28px); font-weight: 400; text-align: center; color: #1A1A1A; margin-bottom: 36px; line-height: 1.3; padding-top: 20px; }
-.eq-circ-wrap { display: flex; justify-content: center; margin-bottom: 32px; }
-.eq-circ { position: relative; width: 110px; height: 110px; }
+.eq-loader-title { font-size: clamp(20px, 5vw, 28px); font-weight: 400; text-align: center; color: #1A1A1A; margin-bottom: 38px; line-height: 1.3; padding-top: 20px; }
+.eq-circ-wrap { display: flex; justify-content: center; margin-bottom: 34px; }
+.eq-circ { position: relative; width: 120px; height: 120px; }
 .eq-circ svg { transform: rotate(-90deg); display: block; }
 .eq-circ-bg { stroke: #E8DDD3; stroke-width: 6; fill: none; }
-.eq-circ-fill { stroke: #C9785B; stroke-width: 6; fill: none; stroke-linecap: round; stroke-dasharray: 276.46; stroke-dashoffset: 276.46; transition: stroke-dashoffset 0.3s linear; }
-.eq-circ-pct { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); font-size: 22px; font-weight: 600; color: #1A1A1A; }
-.eq-ls-list { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; max-width: 300px; margin: 0 auto; }
-.eq-ls { display: flex; align-items: center; gap: 10px; font-size: 13.5px; color: #B0A89E; font-style: italic; transition: color 0.3s; }
+.eq-circ-fill { stroke: #C9785B; stroke-width: 6; fill: none; stroke-linecap: round; stroke-dasharray: 339.29; stroke-dashoffset: 339.29; transition: stroke-dashoffset 0.3s linear; }
+.eq-circ-pct { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); font-size: 24px; font-weight: 600; color: #1A1A1A; }
+.eq-ls-list { display: flex; flex-direction: column; gap: 12px; align-items: flex-start; max-width: 320px; margin: 0 auto; }
+.eq-ls { display: flex; align-items: center; gap: 10px; font-size: 14px; color: #B0A89E; font-style: italic; transition: color 0.3s; }
 .eq-ls.done { color: #C9785B; }
 .eq-ls-icon { width: 16px; height: 16px; opacity: 0; transition: opacity 0.3s; flex-shrink: 0; }
 .eq-ls.done .eq-ls-icon { opacity: 1; }
 .eq-ls-icon svg { width: 16px; height: 16px; stroke: #C9785B; fill: none; stroke-width: 2.5; stroke-linecap: round; }
 
 /* CURE PRÊTE */
-.eq-ready-center { text-align: center; padding-top: 10px; }
-.eq-ready-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(201,120,91,0.1); border-radius: 50px; padding: 8px 18px; font-size: 12.5px; font-weight: 600; color: #C9785B; margin-bottom: 18px; }
-.eq-ready-badge svg { width: 13px; height: 13px; stroke: #C9785B; fill: none; stroke-width: 2.5; stroke-linecap: round; }
+.eq-ready-center { text-align: center; padding-top: 16px; }
+.eq-ready-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(201,120,91,0.1); border-radius: 50px; padding: 9px 20px; font-size: 13px; font-weight: 600; color: #C9785B; margin-bottom: 20px; }
+.eq-ready-badge svg { width: 14px; height: 14px; stroke: #C9785B; fill: none; stroke-width: 2.5; stroke-linecap: round; }
 
 /* RÉSULTAT */
 .eq-profil-lbl { font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #8A8178; margin-bottom: 10px; text-align: center; display: block; }
-.eq-profil-name { font-size: clamp(20px, 5vw, 28px); font-weight: 400; color: #1A1A1A; line-height: 1.22; margin-bottom: 20px; text-align: center; }
+.eq-profil-name { font-size: clamp(20px, 5vw, 28px); font-weight: 400; color: #1A1A1A; line-height: 1.22; margin-bottom: 22px; text-align: center; }
 .eq-profil-name em { font-style: italic; color: #C9785B; }
-.eq-metrics { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 24px; }
-.eq-metric { background: #FFFFFF; border: 1px solid rgba(26,26,26,0.08); border-radius: 12px; padding: 14px 10px; text-align: center; }
+.eq-metrics { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 26px; }
+.eq-metric { background: #FFFFFF; border: 1px solid rgba(26,26,26,0.08); border-radius: 12px; padding: 14px 8px; text-align: center; }
 .eq-metric-icon { font-size: 20px; margin-bottom: 6px; }
-.eq-metric-lbl { font-size: 9px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #8A8178; margin-bottom: 3px; }
+.eq-metric-lbl { font-size: 9px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #8A8178; margin-bottom: 4px; }
 .eq-metric-val { font-size: 12.5px; font-weight: 600; color: #C9785B; line-height: 1.3; }
 
 /* PRODUCT IMAGE */
-.eq-prod-img-wrap { position: relative; border-radius: 18px; overflow: hidden; margin-bottom: 20px; }
-.eq-prod-img-wrap img.eq-prod-main { width: 100%; display: block; border-radius: 18px; }
+.eq-prod-img-wrap { position: relative; border-radius: 18px; overflow: hidden; margin-bottom: 22px; }
+.eq-prod-main { width: 100%; display: block; border-radius: 18px; }
 .eq-prod-badges { position: absolute; top: 14px; right: 14px; display: flex; flex-direction: column; gap: 8px; }
-.eq-badge-pill { background: #FFFFFF; border-radius: 10px; padding: 8px 10px; text-align: center; font-size: 10px; font-weight: 700; color: #1A1A1A; min-width: 64px; box-shadow: 0 2px 8px rgba(0,0,0,0.12); line-height: 1.3; }
+.eq-badge-pill { background: #FFFFFF; border-radius: 10px; padding: 9px 12px; text-align: center; font-size: 10.5px; font-weight: 700; color: #1A1A1A; min-width: 68px; box-shadow: 0 2px 10px rgba(0,0,0,0.12); line-height: 1.3; }
 .eq-badge-stars { color: #E0A23C; font-size: 10px; margin-bottom: 1px; }
 .eq-badge-pill small { font-size: 9px; color: #8A8178; font-weight: 400; display: block; text-transform: uppercase; letter-spacing: 0.06em; }
-.eq-satisfy-badge { position: absolute; bottom: 14px; left: 14px; width: 72px; height: 72px; background: #FFFFFF; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; font-size: 8px; font-weight: 700; color: #1A1A1A; border: 2px solid #1A1A1A; padding: 4px; line-height: 1.25; }
-.eq-satisfy-badge span { font-size: 14px; font-weight: 800; display: block; }
+.eq-satisfy-badge { position: absolute; bottom: 14px; left: 14px; width: 74px; height: 74px; background: #FFFFFF; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; font-size: 8px; font-weight: 700; color: #1A1A1A; border: 2px solid #1A1A1A; padding: 5px; line-height: 1.25; }
+.eq-satisfy-badge span { font-size: 15px; font-weight: 800; display: block; }
+
+/* CURE BADGE */
+.eq-cure-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(201,120,91,0.1); border-radius: 50px; padding: 9px 20px; font-size: 13px; font-weight: 600; color: #C9785B; margin-bottom: 16px; }
 
 /* CTA */
-.eq-cta { display: block; width: 100%; background: #C9785B; color: #FFFFFF; font-family: 'Poppins', sans-serif; font-size: 15px; font-weight: 700; text-align: center; text-decoration: none; padding: 18px 28px; border-radius: 50px; border: none; cursor: pointer; box-shadow: 0 6px 20px rgba(201,120,91,0.28); transition: background 0.2s, transform 0.15s; }
+.eq-cta { display: block; width: 100%; background: #C9785B; color: #FFFFFF; font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 700; text-align: center; text-decoration: none; padding: 20px 32px; border-radius: 100px; border: none; cursor: pointer; box-shadow: 0 6px 20px rgba(201,120,91,0.28); transition: background 0.2s, transform 0.15s; }
 .eq-cta:hover { background: #B56645; transform: translateY(-1px); }
-.eq-guarantee { font-size: 12.5px; color: #8A8178; text-align: center; margin-top: 10px; font-style: italic; }
-.eq-trust { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; margin-top: 14px; font-size: 12px; color: #8A8178; }
-.eq-trust span { display: flex; align-items: center; gap: 4px; }
+.eq-guarantee { font-size: 13px; color: #8A8178; text-align: center; margin-top: 12px; font-style: italic; }
+.eq-trust { display: flex; align-items: center; justify-content: center; gap: 18px; flex-wrap: wrap; margin-top: 16px; font-size: 12px; color: #8A8178; }
+.eq-trust span { display: flex; align-items: center; gap: 5px; }
 .eq-trust svg { width: 12px; height: 12px; stroke: #C9785B; fill: none; stroke-width: 2; stroke-linecap: round; }
 
 /* DESKTOP */
 @media (min-width: 640px) {
-  .eq-box { padding: 24px 40px 80px; }
-  .eq-title { font-size: 32px; }
+  .eq-box { padding: 28px 48px 80px; }
+  .eq-title { font-size: 34px; }
   .eq-opt { font-size: 15.5px; }
+  .eq-btn { font-size: 17px; }
 }
 @media (max-width: 360px) {
   .eq-title { font-size: 20px; }
@@ -165,16 +252,16 @@ body { font-family: 'Poppins', sans-serif; color: #1A1A1A; }
   <img src="https://cdn.shopify.com/s/files/1/0941/4010/5040/files/IMG_3396.png?v=1782182905" alt="Eliora">
 </div>
 <div class="eq-prog-wrap"><div class="eq-prog-bar" id="eqBar"></div></div>
-<div class="eq-prog-label" id="eqProgLabel"></div>
+<div class="eq-prog-label" id="eqPL"></div>
 
-<div class="eq-box" id="eqBox">
+<div class="eq-box">
 
   <!-- 0 — AGE -->
   <div class="eq-step active" data-step="0">
     <span class="eq-label">Analyse personnalisée</span>
     <h1 class="eq-title">Comprenez en <em>2 minutes</em> pourquoi votre ventre gonfle — et comment y mettre fin.</h1>
     <p class="eq-sub">Ce quiz construit votre profil digestif personnalisé. Aucune promesse miracle — juste votre physiologie.</p>
-    <span class="eq-label" style="margin-bottom:14px;">POUR COMMENCER, VOTRE TRANCHE D'ÂGE :</span>
+    <span class="eq-label" style="margin-bottom:16px;">POUR COMMENCER, VOTRE TRANCHE D'ÂGE :</span>
     <div class="eq-grid">
       <div class="eq-photo" onclick="eqAge(this)">
         <img src="https://cdn.shopify.com/s/files/1/0941/4010/5040/files/ChatGPT_Image_28_juin_2026_05_29_16.png?v=1782617470" alt="18-25 ans">
@@ -232,17 +319,17 @@ body { font-family: 'Poppins', sans-serif; color: #1A1A1A; }
     <div class="eq-restart"><a onclick="eqRestart()">↺ Recommencer</a></div>
   </div>
 
-  <!-- Q3 -->
+  <!-- Q3 — DURÉE (utilisée pour calculer la cure) -->
   <div class="eq-step" data-step="3">
     <div class="eq-back" onclick="eqGo(2)"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Retour</div>
     <span class="eq-label">Question 3 / 12</span>
     <h2 class="eq-title">Depuis combien de temps <em>cela dure-t-il</em> ?</h2>
     <div class="eq-opts">
-      <div class="eq-opt" onclick="eqS(this,3)">Moins de 6 mois</div>
-      <div class="eq-opt" onclick="eqS(this,3)">Entre 6 mois et 2 ans</div>
-      <div class="eq-opt" onclick="eqS(this,3)">Entre 2 et 5 ans</div>
-      <div class="eq-opt" onclick="eqS(this,3)">Plus de 5 ans</div>
-      <div class="eq-opt" onclick="eqS(this,3)">J'ai toujours connu ça</div>
+      <div class="eq-opt" data-score="1" onclick="eqS(this,3)">Moins de 6 mois</div>
+      <div class="eq-opt" data-score="2" onclick="eqS(this,3)">Entre 6 mois et 2 ans</div>
+      <div class="eq-opt" data-score="3" onclick="eqS(this,3)">Entre 2 et 5 ans</div>
+      <div class="eq-opt" data-score="4" onclick="eqS(this,3)">Plus de 5 ans</div>
+      <div class="eq-opt" data-score="4" onclick="eqS(this,3)">J'ai toujours connu ça</div>
     </div>
     <div class="eq-btn-wrap"><button class="eq-btn" id="b3" onclick="eqGo(4)">Continuer</button></div>
     <div class="eq-restart"><a onclick="eqRestart()">↺ Recommencer</a></div>
@@ -298,16 +385,16 @@ body { font-family: 'Poppins', sans-serif; color: #1A1A1A; }
     <div class="eq-restart"><a onclick="eqRestart()">↺ Recommencer</a></div>
   </div>
 
-  <!-- Q7 -->
+  <!-- Q7 — STRESS (score) -->
   <div class="eq-step" data-step="7">
     <div class="eq-back" onclick="eqGo(6)"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Retour</div>
     <span class="eq-label">Question 7 / 12</span>
     <h2 class="eq-title">Votre niveau de <em>stress</em> au quotidien ?</h2>
     <div class="eq-opts">
-      <div class="eq-opt" onclick="eqS(this,7)">Faible — je me sens globalement sereine</div>
-      <div class="eq-opt" onclick="eqS(this,7)">Modéré — quelques tensions régulières</div>
-      <div class="eq-opt" onclick="eqS(this,7)">Élevé — je me sens souvent sous pression</div>
-      <div class="eq-opt" onclick="eqS(this,7)">Très élevé — stress chronique ou anxiété</div>
+      <div class="eq-opt" data-score="0" onclick="eqS(this,7)">Faible — je me sens globalement sereine</div>
+      <div class="eq-opt" data-score="1" onclick="eqS(this,7)">Modéré — quelques tensions régulières</div>
+      <div class="eq-opt" data-score="2" onclick="eqS(this,7)">Élevé — je me sens souvent sous pression</div>
+      <div class="eq-opt" data-score="2" onclick="eqS(this,7)">Très élevé — stress chronique ou anxiété</div>
     </div>
     <div class="eq-btn-wrap"><button class="eq-btn" id="b7" onclick="eqGo(8)">Continuer</button></div>
     <div class="eq-restart"><a onclick="eqRestart()">↺ Recommencer</a></div>
@@ -381,7 +468,7 @@ body { font-family: 'Poppins', sans-serif; color: #1A1A1A; }
   <div class="eq-step" data-step="12">
     <div class="eq-back" onclick="eqGo(11)"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Retour</div>
     <span class="eq-label">Question 12 / 12</span>
-    <h2 class="eq-title">Êtes-vous prête à suivre une <em>cure de 1 à 3 mois</em> pour des résultats durables ?</h2>
+    <h2 class="eq-title">Êtes-vous prête à suivre une <em>cure de 1 à 5 mois</em> pour des résultats durables ?</h2>
     <p class="eq-sub">Le confort digestif se construit progressivement — la physiologie demande du temps.</p>
     <div class="eq-row">
       <button class="eq-btn-yes" onclick="eqGo(13)">✓ Oui, je suis prête</button>
@@ -393,18 +480,18 @@ body { font-family: 'Poppins', sans-serif; color: #1A1A1A; }
   <!-- ÉDUCATION -->
   <div class="eq-step" data-step="13">
     <div class="eq-back" onclick="eqGo(12)"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Retour</div>
-    <h2 class="eq-title" style="margin-bottom:18px;">Avant d'essayer un produit de plus, <em>lisez ceci.</em></h2>
+    <h2 class="eq-title" style="margin-bottom:20px;">Avant d'essayer un produit de plus, <em>lisez ceci.</em></h2>
     <p class="eq-edu-hi">Probiotiques. Tisanes "détox". Régimes sans gluten, sans lactose. Charbon sans formule.</p>
     <p class="eq-edu-p">Beaucoup de femmes essaient ces solutions pendant des années — avec des résultats fugaces, jamais durables. Ce n'est pas votre faute.</p>
     <p class="eq-edu-p"><strong>Aucune de ces solutions n'agit là où le problème commence vraiment : sur la production et l'accumulation des gaz intestinaux.</strong></p>
     <p class="eq-edu-p">Les bactéries intestinales fermentent les aliments et produisent des gaz. Si ces gaz ne sont pas capturés <strong>au moment précis où ils se forment</strong> — ils s'accumulent. Et votre ventre gonfle.</p>
     <div class="eq-insight">💡 Ce n'est pas ce que vous mangez qui est le problème. C'est que personne n'a jamais <strong>capturé les gaz à la source</strong>.</div>
-    <span class="eq-temo-title">TÉMOIGNAGES</span>
+    <span class="eq-temo-label">TÉMOIGNAGES</span>
     <div class="eq-temo-grid">
-      <div class="eq-temo-cell"><img src="https://cdn.shopify.com/s/files/1/0941/4010/5040/files/IMG_3486.avif?v=1782515881" alt="Avant après" onerror="this.style.display='none'"></div>
-      <div class="eq-temo-cell" style="display:flex;align-items:center;justify-content:center;font-size:11px;color:#8A8178;text-align:center;padding:10px;">À venir</div>
-      <div class="eq-temo-cell" style="display:flex;align-items:center;justify-content:center;font-size:11px;color:#8A8178;text-align:center;padding:10px;">À venir</div>
-      <div class="eq-temo-cell" style="display:flex;align-items:center;justify-content:center;font-size:11px;color:#8A8178;text-align:center;padding:10px;">À venir</div>
+      <div class="eq-temo-cell"><img src="https://cdn.shopify.com/s/files/1/0941/4010/5040/files/IMG_3486.avif?v=1782515881" alt="Avant après"></div>
+      <div class="eq-temo-cell"><img src="https://cdn.shopify.com/s/files/1/0941/4010/5040/files/IMG_3530.png?v=1782696177" alt="Avant après"></div>
+      <div class="eq-temo-cell"><img src="https://cdn.shopify.com/s/files/1/0941/4010/5040/files/IMG-3418.png?v=1782223436" alt="Avant après"></div>
+      <div class="eq-temo-cell"><img src="https://cdn.shopify.com/s/files/1/0941/4010/5040/files/IMG-3419.png?v=1782223437" alt="Avant après"></div>
     </div>
     <p class="eq-edu-p">Sur la page suivante, vous découvrirez votre <strong>profil digestif personnalisé</strong> et la cure adaptée à votre physiologie.</p>
     <button class="eq-btn-solid" onclick="eqGo(14)">Découvrir mon profil</button>
@@ -416,9 +503,9 @@ body { font-family: 'Poppins', sans-serif; color: #1A1A1A; }
     <p class="eq-loader-title" id="eqLT">Préparation de votre cure...</p>
     <div class="eq-circ-wrap">
       <div class="eq-circ">
-        <svg viewBox="0 0 100 100" width="110" height="110">
-          <circle class="eq-circ-bg" cx="50" cy="50" r="44"/>
-          <circle class="eq-circ-fill" id="eqCF" cx="50" cy="50" r="44"/>
+        <svg viewBox="0 0 120 120" width="120" height="120">
+          <circle class="eq-circ-bg" cx="60" cy="60" r="54"/>
+          <circle class="eq-circ-fill" id="eqCF" cx="60" cy="60" r="54"/>
         </svg>
         <div class="eq-circ-pct" id="eqCP">0%</div>
       </div>
@@ -426,7 +513,7 @@ body { font-family: 'Poppins', sans-serif; color: #1A1A1A; }
     <div class="eq-ls-list">
       <div class="eq-ls" id="eqL1"><span class="eq-ls-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Analyse de vos symptômes digestifs...</div>
       <div class="eq-ls" id="eqL2"><span class="eq-ls-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Identification de votre profil intestinal...</div>
-      <div class="eq-ls" id="eqL3"><span class="eq-ls-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Vérification du dosage adapté...</div>
+      <div class="eq-ls" id="eqL3"><span class="eq-ls-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Calcul de la cure adaptée à votre durée...</div>
       <div class="eq-ls" id="eqL4"><span class="eq-ls-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Configuration de votre cure personnalisée...</div>
     </div>
     <div class="eq-restart" style="margin-top:40px;"><a onclick="eqRestart()">↺ Recommencer</a></div>
@@ -440,7 +527,7 @@ body { font-family: 'Poppins', sans-serif; color: #1A1A1A; }
       <div class="eq-ready-badge"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Compatible avec votre physiologie</div>
       <h2 class="eq-title" style="margin-bottom:10px;">Votre cure digestive est prête à être commencée.</h2>
       <button class="eq-btn-solid" onclick="eqGo(16)">Découvrir ma cure adaptée</button>
-      <p class="eq-guarantee" style="margin-top:12px;">Garantie satisfaite ou remboursée — sans formulaire ni photos.</p>
+      <p class="eq-guarantee" style="margin-top:14px;">Garantie satisfaite ou remboursée — sans formulaire ni photos.</p>
     </div>
     <div class="eq-restart"><a onclick="eqRestart()">↺ Recommencer</a></div>
   </div>
@@ -457,24 +544,27 @@ body { font-family: 'Poppins', sans-serif; color: #1A1A1A; }
     <div class="eq-restart"><a onclick="eqRestart()">↺ Recommencer</a></div>
   </div>
 
-  <!-- RÉSULTAT -->
+  <!-- RÉSULTAT ADAPTÉ -->
   <div class="eq-step" data-step="17">
     <span class="eq-profil-lbl">VOTRE PROFIL DIGESTIF PERSONNALISÉ</span>
-    <h2 class="eq-profil-name">Votre profil : <em>fermentation intestinale active</em></h2>
+    <h2 class="eq-profil-name" id="eqProfilName">Votre profil : <em>fermentation intestinale active</em></h2>
     <div class="eq-metrics">
-      <div class="eq-metric"><div class="eq-metric-icon">💨</div><div class="eq-metric-lbl">Mécanisme</div><div class="eq-metric-val">Gaz + Fermentation</div></div>
-      <div class="eq-metric"><div class="eq-metric-icon">📈</div><div class="eq-metric-lbl">Réversibilité</div><div class="eq-metric-val">Très bonne</div></div>
-      <div class="eq-metric"><div class="eq-metric-icon">🌿</div><div class="eq-metric-lbl">Cure</div><div class="eq-metric-val">1–3 mois</div></div>
+      <div class="eq-metric"><div class="eq-metric-icon">💨</div><div class="eq-metric-lbl">Mécanisme</div><div class="eq-metric-val" id="eqMeca">Gaz + Fermentation</div></div>
+      <div class="eq-metric"><div class="eq-metric-icon">📈</div><div class="eq-metric-lbl">Réversibilité</div><div class="eq-metric-val" id="eqRev">Très bonne</div></div>
+      <div class="eq-metric"><div class="eq-metric-icon">🌿</div><div class="eq-metric-lbl">Cure conseillée</div><div class="eq-metric-val" id="eqCure">3 mois</div></div>
     </div>
     <div class="eq-prod-img-wrap">
-      <img class="eq-prod-main" src="https://cdn.shopify.com/s/files/1/0941/4010/5040/files/IMG_3515.WEBP" alt="Eliora" onerror="this.src='https://cdn.shopify.com/s/files/1/0941/4010/5040/files/Kaching-Bundles-IMG_3421.png?v=1782225944'">
+      <img class="eq-prod-main" src="https://cdn.shopify.com/s/files/1/0941/4010/5040/files/IMG_3516.PNG" alt="Eliora" onerror="this.src='https://cdn.shopify.com/s/files/1/0941/4010/5040/files/Kaching-Bundles-IMG_3421.png?v=1782225944'">
       <div class="eq-prod-badges">
         <div class="eq-badge-pill"><div class="eq-badge-stars">★★★★★</div>Noté<br>4,8/5</div>
         <div class="eq-badge-pill"><small>Ingrédients</small>100%<br>naturels</div>
       </div>
       <div class="eq-satisfy-badge">SATISFAIT<span>90</span>JOURS REMBOURSÉ</div>
     </div>
-    <a href="/products/gelule-anti-ballonnement" class="eq-cta">Découvrir ma cure adaptée →</a>
+    <div style="text-align:center;margin-bottom:16px;">
+      <div class="eq-cure-badge" id="eqCureBadge">✓ Cure recommandée : 3 mois</div>
+    </div>
+    <a href="/products/gelule-anti-ballonnement" class="eq-cta" id="eqCTA">Découvrir ma cure adaptée →</a>
     <p class="eq-guarantee">Garantie satisfaite ou remboursée — sans formulaire ni photos.</p>
     <div class="eq-trust">
       <span><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Livraison offerte</span>
@@ -488,47 +578,101 @@ body { font-family: 'Poppins', sans-serif; color: #1A1A1A; }
 
 <script>
 var EQ_TOTAL = 17;
+var eqScoreQ3 = 2; // durée (1=court, 2=moyen, 3-4=long)
+var eqScoreQ7 = 1; // stress (0=faible, 1=modéré, 2=élevé)
+
 function eqProg(n) {
   var p = Math.round((n/EQ_TOTAL)*100);
   document.getElementById('eqBar').style.width = p+'%';
-  var lbl = document.getElementById('eqProgLabel');
+  var lbl = document.getElementById('eqPL');
   lbl.textContent = (n>0 && n<13) ? 'Question '+n+' / 12' : '';
 }
+
 function eqGo(n) {
   document.querySelectorAll('.eq-step').forEach(function(s){ s.classList.remove('active'); });
   var t = document.querySelector('[data-step="'+n+'"]');
   if(t){ t.classList.add('active'); eqProg(n); window.scrollTo({top:0,behavior:'smooth'}); }
   if(n===14){ eqLoader(); }
+  if(n===17){ eqBuildResult(); }
 }
+
 function eqAge(el) {
   document.querySelectorAll('.eq-photo').forEach(function(c){ c.classList.remove('sel'); });
   el.classList.add('sel');
   setTimeout(function(){ eqGo(1); }, 350);
 }
+
 function eqS(el, step) {
   el.closest('.eq-opts').querySelectorAll('.eq-opt').forEach(function(o){ o.classList.remove('sel'); });
   el.classList.add('sel');
+  // Capture scores
+  var score = el.getAttribute('data-score');
+  if(step===3 && score) eqScoreQ3 = parseInt(score);
+  if(step===7 && score) eqScoreQ7 = parseInt(score);
   var b = document.getElementById('b'+step);
   if(b) b.classList.add('show');
   setTimeout(function(){ eqGo(step+1); }, 400);
 }
+
 function eqM(el, step) {
   el.classList.toggle('sel');
   var any = el.closest('.eq-opts').querySelectorAll('.eq-opt.sel').length > 0;
   var b = document.getElementById('b'+step);
   if(b){ any ? b.classList.add('show') : b.classList.remove('show'); }
 }
+
 function eqRestart() {
   document.querySelectorAll('.eq-step').forEach(function(s){ s.classList.remove('active'); });
   document.querySelectorAll('.eq-opt').forEach(function(o){ o.classList.remove('sel'); });
   document.querySelectorAll('.eq-photo').forEach(function(c){ c.classList.remove('sel'); });
   document.querySelectorAll('.eq-btn').forEach(function(b){ b.classList.remove('show'); });
+  eqScoreQ3=2; eqScoreQ7=1;
   document.querySelector('[data-step="0"]').classList.add('active');
   eqProg(0); window.scrollTo({top:0,behavior:'smooth'});
 }
+
+/* CALCUL CURE ADAPTÉE */
+function eqBuildResult() {
+  var totalScore = eqScoreQ3 + eqScoreQ7;
+  var cure, profil, meca, rev, badgeTxt;
+
+  if(totalScore <= 1) {
+    cure = '1 mois';
+    profil = 'sensibilité digestive légère';
+    meca = 'Gaz + Sensibilité';
+    rev = 'Excellente';
+    badgeTxt = '✓ Cure recommandée : 1 mois';
+  } else if(totalScore <= 3) {
+    cure = '3 mois';
+    profil = 'fermentation intestinale modérée';
+    meca = 'Gaz + Fermentation';
+    rev = 'Très bonne';
+    badgeTxt = '✓ Cure recommandée : 3 mois';
+  } else {
+    cure = '5 mois';
+    profil = 'fermentation intestinale chronique';
+    meca = 'Gaz + Fermentation\nchronique';
+    rev = 'Bonne';
+    badgeTxt = '✓ Cure recommandée : 5 mois';
+  }
+
+  document.getElementById('eqProfilName').innerHTML = 'Votre profil : <em>'+profil+'</em>';
+  document.getElementById('eqMeca').textContent = meca;
+  document.getElementById('eqRev').textContent = rev;
+  document.getElementById('eqCure').textContent = cure;
+  document.getElementById('eqCureBadge').textContent = badgeTxt;
+}
+
 function eqLoader() {
-  var pct=0, cf=document.getElementById('eqCF'), cp=document.getElementById('eqCP'), lt=document.getElementById('eqLT');
-  var C=2*Math.PI*44, ls=['eqL1','eqL2','eqL3','eqL4'], si=0;
+  var pct=0;
+  var cf=document.getElementById('eqCF');
+  var cp=document.getElementById('eqCP');
+  var lt=document.getElementById('eqLT');
+  // r=54, C = 2*PI*54 = 339.29
+  var C=2*Math.PI*54;
+  var ls=['eqL1','eqL2','eqL3','eqL4'];
+  var si=0;
+  cf.style.strokeDasharray=C;
   cf.style.strokeDashoffset=C;
   var iv=setInterval(function(){
     pct++;
@@ -541,6 +685,7 @@ function eqLoader() {
     if(pct>=100){clearInterval(iv);setTimeout(function(){eqGo(15);},700);}
   },28);
 }
+
 eqProg(0);
 </script>
 </body>
