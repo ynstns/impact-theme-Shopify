@@ -1,35 +1,43 @@
+{% layout none %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz — Eliora</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-.eq { font-family: 'Poppins', sans-serif; background: #FAF6F0; color: #1A1A1A; min-height: 100vh; }
+html, body { min-height: 100vh; background: #FAF6F0; }
+body { font-family: 'Poppins', sans-serif; color: #1A1A1A; }
 
 /* HEADER */
-.eq-header { text-align: center; padding: 16px 20px; background: #FAF6F0; }
+.eq-header { text-align: center; padding: 18px 20px; background: #FAF6F0; border-bottom: 1px solid rgba(26,26,26,0.07); }
 .eq-header img { height: 36px; width: auto; }
 
 /* PROGRESS */
 .eq-prog-wrap { height: 3px; background: #E8DDD3; }
 .eq-prog-bar { height: 3px; background: #C9785B; transition: width 0.4s ease; width: 0%; }
-.eq-prog-label { text-align: center; font-size: 12px; color: #8A8178; padding: 6px 0; }
+.eq-prog-label { text-align: center; font-size: 12px; color: #8A8178; padding: 6px 0; min-height: 26px; }
 
 /* CONTAINER */
-.eq-box { max-width: 540px; margin: 0 auto; padding: 12px 20px 80px; }
+.eq-box { max-width: 540px; margin: 0 auto; padding: 16px 20px 80px; }
 
 /* STEPS */
-.eq-step { display: none; animation: eqFade 0.25s ease; }
+.eq-step { display: none; animation: eqFade 0.22s ease; }
 .eq-step.active { display: block; }
-@keyframes eqFade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes eqFade { from { opacity:0; transform:translateY(5px); } to { opacity:1; transform:translateY(0); } }
 
 /* BACK */
-.eq-back { display: inline-flex; align-items: center; gap: 6px; background: #FFFFFF; border: 1px solid rgba(26,26,26,0.12); border-radius: 50px; padding: 7px 16px; font-size: 13px; font-weight: 500; color: #1A1A1A; cursor: pointer; margin-bottom: 22px; transition: background 0.2s; -webkit-tap-highlight-color: transparent; }
+.eq-back { display: inline-flex; align-items: center; gap: 6px; background: #FFFFFF; border: 1px solid rgba(26,26,26,0.12); border-radius: 50px; padding: 7px 16px; font-size: 13px; font-weight: 500; color: #1A1A1A; cursor: pointer; margin-bottom: 24px; transition: background 0.18s; -webkit-tap-highlight-color: transparent; }
 .eq-back:hover { background: #F0E8DE; }
 .eq-back svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
 
-/* TITLES */
+/* TEXT — ALL CENTERED */
 .eq-label { font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #8A8178; margin-bottom: 12px; text-align: center; display: block; }
-.eq-title { font-size: clamp(22px, 5.5vw, 32px); font-weight: 400; line-height: 1.22; color: #1A1A1A; margin-bottom: 8px; letter-spacing: -0.02em; }
+.eq-title { font-size: clamp(22px, 5.5vw, 32px); font-weight: 400; line-height: 1.22; color: #1A1A1A; margin-bottom: 8px; letter-spacing: -0.02em; text-align: center; }
 .eq-title em { font-style: italic; color: #C9785B; }
-.eq-sub { font-size: 13px; color: #8A8178; line-height: 1.6; margin-bottom: 26px; font-style: italic; }
+.eq-sub { font-size: 13px; color: #8A8178; line-height: 1.6; margin-bottom: 26px; font-style: italic; text-align: center; }
 .eq-hint { font-size: 12px; color: #8A8178; text-align: center; margin-bottom: 14px; font-style: italic; }
 
 /* PHOTOS */
@@ -38,7 +46,7 @@
 .eq-photo:hover { transform: translateY(-2px); border-color: rgba(201,120,91,0.4); }
 .eq-photo.sel { border-color: #C9785B; }
 .eq-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.eq-photo-lbl { position: absolute; bottom: 0; left: 0; right: 0; padding: 30px 12px 12px; background: linear-gradient(to top, rgba(0,0,0,0.6), transparent); color: #FFF; font-size: 13.5px; font-weight: 500; }
+.eq-photo-lbl { position: absolute; bottom: 0; left: 0; right: 0; padding: 30px 12px 12px; background: linear-gradient(to top, rgba(0,0,0,0.6), transparent); color: #FFF; font-size: 13.5px; font-weight: 500; text-align: center; }
 
 /* UNLOCK */
 .eq-unlock { text-align: center; margin: 4px 0 18px; }
@@ -47,55 +55,58 @@
 /* DOCTOR */
 .eq-doc { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border: 1px solid rgba(26,26,26,0.08); border-radius: 12px; background: #FFFFFF; margin-top: 20px; }
 .eq-doc-av { width: 44px; height: 44px; border-radius: 50%; overflow: hidden; flex-shrink: 0; }
-.eq-doc-av img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; }
+.eq-doc-av img { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; display: block; }
 .eq-doc small { font-size: 11px; color: #8A8178; display: block; }
 .eq-doc strong { font-size: 13.5px; font-weight: 700; color: #1A1A1A; display: block; }
 .eq-doc em { font-size: 12px; color: #8A8178; font-style: italic; }
 
 /* OPTIONS */
 .eq-opts { display: flex; flex-direction: column; gap: 10px; margin-bottom: 18px; }
-.eq-opt { background: #FFFFFF; border: 1.5px solid rgba(26,26,26,0.1); border-radius: 12px; padding: 15px 18px; cursor: pointer; font-size: 15px; font-weight: 400; color: #1A1A1A; line-height: 1.4; transition: border-color 0.18s, color 0.18s, background 0.18s; user-select: none; -webkit-tap-highlight-color: transparent; }
+.eq-opt { background: #FFFFFF; border: 1.5px solid rgba(26,26,26,0.1); border-radius: 12px; padding: 15px 18px; cursor: pointer; font-size: 15px; font-weight: 400; color: #1A1A1A; line-height: 1.4; transition: border-color 0.18s, color 0.18s, background 0.18s; user-select: none; -webkit-tap-highlight-color: transparent; text-align: left; }
 .eq-opt strong { font-weight: 700; }
 .eq-opt:hover { border-color: rgba(201,120,91,0.4); }
 .eq-opt.sel { border-color: #C9785B; color: #C9785B; background: rgba(201,120,91,0.04); }
 .eq-opt.sel strong { color: #C9785B; }
 
-/* INSIGHT BOX */
-.eq-insight { background: rgba(201,120,91,0.08); border-left: 3px solid #C9785B; border-radius: 0 10px 10px 0; padding: 15px 18px; margin: 18px 0; font-size: 13.5px; color: #4A3728; line-height: 1.65; }
+/* INSIGHT */
+.eq-insight { background: rgba(201,120,91,0.08); border-left: 3px solid #C9785B; border-radius: 0 10px 10px 0; padding: 15px 18px; margin: 18px 0; font-size: 13.5px; color: #4A3728; line-height: 1.65; text-align: left; }
 .eq-insight strong { color: #C9785B; }
 
-/* BUTTONS */
-.eq-btn { width: 100%; background: #C9785B; color: #FFFFFF; font-family: 'Poppins', sans-serif; font-size: 15px; font-weight: 600; border: none; border-radius: 50px; padding: 17px 28px; cursor: pointer; margin-top: 6px; transition: background 0.2s, transform 0.15s; display: none; -webkit-tap-highlight-color: transparent; }
-.eq-btn.show { display: block; }
+/* BUTTONS — tous centrés */
+.eq-btn-wrap { display: flex; justify-content: center; margin-top: 8px; }
+.eq-btn { background: #C9785B; color: #FFFFFF; font-family: 'Poppins', sans-serif; font-size: 15px; font-weight: 600; border: none; border-radius: 50px; padding: 17px 48px; cursor: pointer; transition: background 0.2s, transform 0.15s; display: none; -webkit-tap-highlight-color: transparent; }
+.eq-btn.show { display: inline-block; }
 .eq-btn:hover { background: #B56645; transform: translateY(-1px); }
-.eq-btn-solid { width: 100%; background: #C9785B; color: #FFFFFF; font-family: 'Poppins', sans-serif; font-size: 15px; font-weight: 600; border: none; border-radius: 50px; padding: 17px 28px; cursor: pointer; margin-top: 16px; display: block; transition: background 0.2s, transform 0.15s; }
+
+.eq-btn-solid { display: block; width: 100%; background: #C9785B; color: #FFFFFF; font-family: 'Poppins', sans-serif; font-size: 15px; font-weight: 600; border: none; border-radius: 50px; padding: 17px 28px; cursor: pointer; margin-top: 16px; transition: background 0.2s, transform 0.15s; text-align: center; }
 .eq-btn-solid:hover { background: #B56645; transform: translateY(-1px); }
-.eq-row { display: flex; gap: 10px; margin-top: 20px; }
-.eq-btn-yes { flex: 1; background: #C9785B; color: #FFFFFF; font-family: 'Poppins', sans-serif; font-size: 15px; font-weight: 600; border: none; border-radius: 50px; padding: 16px 20px; cursor: pointer; transition: background 0.2s; }
-.eq-btn-no { flex: 1; background: #FFFFFF; color: #1A1A1A; font-family: 'Poppins', sans-serif; font-size: 15px; font-weight: 500; border: 1.5px solid rgba(26,26,26,0.12); border-radius: 50px; padding: 16px 20px; cursor: pointer; }
+
+.eq-row { display: flex; gap: 10px; margin-top: 20px; justify-content: center; }
+.eq-btn-yes { flex: 1; max-width: 220px; background: #C9785B; color: #FFFFFF; font-family: 'Poppins', sans-serif; font-size: 15px; font-weight: 600; border: none; border-radius: 50px; padding: 16px 20px; cursor: pointer; transition: background 0.2s; }
+.eq-btn-no { flex: 1; max-width: 160px; background: #FFFFFF; color: #1A1A1A; font-family: 'Poppins', sans-serif; font-size: 15px; font-weight: 500; border: 1.5px solid rgba(26,26,26,0.12); border-radius: 50px; padding: 16px 20px; cursor: pointer; transition: background 0.2s; text-align: center; }
 
 /* RESTART */
 .eq-restart { text-align: center; margin-top: 28px; padding-top: 20px; border-top: 1px solid rgba(26,26,26,0.08); }
 .eq-restart a { font-size: 13px; color: #8A8178; cursor: pointer; display: inline-flex; align-items: center; gap: 5px; }
 
-/* EDUCATION */
-.eq-edu-hi { font-size: 15px; font-weight: 600; color: #C9785B; line-height: 1.5; margin-bottom: 14px; }
-.eq-edu-p { font-size: 14.5px; color: #1A1A1A; line-height: 1.7; margin-bottom: 14px; }
+/* ÉDUCATION */
+.eq-edu-hi { font-size: 15px; font-weight: 600; color: #C9785B; line-height: 1.5; margin-bottom: 14px; text-align: left; }
+.eq-edu-p { font-size: 14.5px; color: #1A1A1A; line-height: 1.7; margin-bottom: 14px; text-align: left; }
 .eq-edu-p strong { color: #C9785B; }
-.eq-temo-title { font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #8A8178; margin: 22px 0 10px; }
+.eq-temo-title { font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #8A8178; margin: 22px 0 10px; text-align: left; display: block; }
 .eq-temo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 20px; }
 .eq-temo-cell { aspect-ratio: 3/4; border-radius: 10px; background: #EDE6DC; overflow: hidden; }
 .eq-temo-cell img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 /* LOADER */
-.eq-loader-title { font-size: clamp(20px, 5vw, 28px); font-weight: 400; text-align: center; color: #1A1A1A; margin-bottom: 36px; line-height: 1.3; padding-top: 10px; }
+.eq-loader-title { font-size: clamp(20px, 5vw, 28px); font-weight: 400; text-align: center; color: #1A1A1A; margin-bottom: 36px; line-height: 1.3; padding-top: 20px; }
 .eq-circ-wrap { display: flex; justify-content: center; margin-bottom: 32px; }
 .eq-circ { position: relative; width: 110px; height: 110px; }
 .eq-circ svg { transform: rotate(-90deg); display: block; }
 .eq-circ-bg { stroke: #E8DDD3; stroke-width: 6; fill: none; }
 .eq-circ-fill { stroke: #C9785B; stroke-width: 6; fill: none; stroke-linecap: round; stroke-dasharray: 276.46; stroke-dashoffset: 276.46; transition: stroke-dashoffset 0.3s linear; }
 .eq-circ-pct { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); font-size: 22px; font-weight: 600; color: #1A1A1A; }
-.eq-ls-list { display: flex; flex-direction: column; gap: 10px; }
+.eq-ls-list { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; max-width: 300px; margin: 0 auto; }
 .eq-ls { display: flex; align-items: center; gap: 10px; font-size: 13.5px; color: #B0A89E; font-style: italic; transition: color 0.3s; }
 .eq-ls.done { color: #C9785B; }
 .eq-ls-icon { width: 16px; height: 16px; opacity: 0; transition: opacity 0.3s; flex-shrink: 0; }
@@ -103,14 +114,15 @@
 .eq-ls-icon svg { width: 16px; height: 16px; stroke: #C9785B; fill: none; stroke-width: 2.5; stroke-linecap: round; }
 
 /* CURE PRÊTE */
+.eq-ready-center { text-align: center; padding-top: 10px; }
 .eq-ready-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(201,120,91,0.1); border-radius: 50px; padding: 8px 18px; font-size: 12.5px; font-weight: 600; color: #C9785B; margin-bottom: 18px; }
 .eq-ready-badge svg { width: 13px; height: 13px; stroke: #C9785B; fill: none; stroke-width: 2.5; stroke-linecap: round; }
 
-/* RESULT */
-.eq-profil-lbl { font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #8A8178; margin-bottom: 10px; display: block; }
-.eq-profil-name { font-size: clamp(22px, 5.5vw, 30px); font-weight: 400; color: #1A1A1A; line-height: 1.22; margin-bottom: 20px; }
+/* RÉSULTAT */
+.eq-profil-lbl { font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #8A8178; margin-bottom: 10px; text-align: center; display: block; }
+.eq-profil-name { font-size: clamp(20px, 5vw, 28px); font-weight: 400; color: #1A1A1A; line-height: 1.22; margin-bottom: 20px; text-align: center; }
 .eq-profil-name em { font-style: italic; color: #C9785B; }
-.eq-metrics { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 28px; }
+.eq-metrics { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 24px; }
 .eq-metric { background: #FFFFFF; border: 1px solid rgba(26,26,26,0.08); border-radius: 12px; padding: 14px 10px; text-align: center; }
 .eq-metric-icon { font-size: 20px; margin-bottom: 6px; }
 .eq-metric-lbl { font-size: 9px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #8A8178; margin-bottom: 3px; }
@@ -120,11 +132,11 @@
 .eq-prod-img-wrap { position: relative; border-radius: 18px; overflow: hidden; margin-bottom: 20px; }
 .eq-prod-img-wrap img.eq-prod-main { width: 100%; display: block; border-radius: 18px; }
 .eq-prod-badges { position: absolute; top: 14px; right: 14px; display: flex; flex-direction: column; gap: 8px; }
-.eq-badge-pill { background: #FFFFFF; border-radius: 10px; padding: 8px 10px; text-align: center; font-size: 10px; font-weight: 700; color: #1A1A1A; min-width: 64px; box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
+.eq-badge-pill { background: #FFFFFF; border-radius: 10px; padding: 8px 10px; text-align: center; font-size: 10px; font-weight: 700; color: #1A1A1A; min-width: 64px; box-shadow: 0 2px 8px rgba(0,0,0,0.12); line-height: 1.3; }
 .eq-badge-stars { color: #E0A23C; font-size: 10px; margin-bottom: 1px; }
 .eq-badge-pill small { font-size: 9px; color: #8A8178; font-weight: 400; display: block; text-transform: uppercase; letter-spacing: 0.06em; }
-.eq-satisfy-badge { position: absolute; bottom: 14px; left: 14px; width: 72px; height: 72px; background: #FFFFFF; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; font-size: 8.5px; font-weight: 700; color: #1A1A1A; border: 2px solid #1A1A1A; padding: 6px; line-height: 1.2; }
-.eq-satisfy-badge span { font-size: 13px; font-weight: 800; display: block; }
+.eq-satisfy-badge { position: absolute; bottom: 14px; left: 14px; width: 72px; height: 72px; background: #FFFFFF; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; font-size: 8px; font-weight: 700; color: #1A1A1A; border: 2px solid #1A1A1A; padding: 4px; line-height: 1.25; }
+.eq-satisfy-badge span { font-size: 14px; font-weight: 800; display: block; }
 
 /* CTA */
 .eq-cta { display: block; width: 100%; background: #C9785B; color: #FFFFFF; font-family: 'Poppins', sans-serif; font-size: 15px; font-weight: 700; text-align: center; text-decoration: none; padding: 18px 28px; border-radius: 50px; border: none; cursor: pointer; box-shadow: 0 6px 20px rgba(201,120,91,0.28); transition: background 0.2s, transform 0.15s; }
@@ -136,362 +148,357 @@
 
 /* DESKTOP */
 @media (min-width: 640px) {
-  .eq-box { padding: 20px 32px 80px; }
+  .eq-box { padding: 24px 40px 80px; }
   .eq-title { font-size: 32px; }
-  .eq-opt { font-size: 15.5px; padding: 16px 20px; }
-  .eq-metrics { gap: 14px; }
-  .eq-metric { padding: 16px 12px; }
-  .eq-metric-val { font-size: 13px; }
+  .eq-opt { font-size: 15.5px; }
 }
 @media (max-width: 360px) {
   .eq-title { font-size: 20px; }
   .eq-metrics { gap: 6px; }
-  .eq-metric { padding: 10px 6px; }
-  .eq-metric-icon { font-size: 17px; }
+  .eq-metric { padding: 10px 5px; }
 }
 </style>
+</head>
+<body>
 
-<div class="eq">
-  <div class="eq-header">
-    <img src="https://cdn.shopify.com/s/files/1/0941/4010/5040/files/IMG_3396.png?v=1782182905" alt="Eliora">
+<div class="eq-header">
+  <img src="https://cdn.shopify.com/s/files/1/0941/4010/5040/files/IMG_3396.png?v=1782182905" alt="Eliora">
+</div>
+<div class="eq-prog-wrap"><div class="eq-prog-bar" id="eqBar"></div></div>
+<div class="eq-prog-label" id="eqProgLabel"></div>
+
+<div class="eq-box" id="eqBox">
+
+  <!-- 0 — AGE -->
+  <div class="eq-step active" data-step="0">
+    <span class="eq-label">Analyse personnalisée</span>
+    <h1 class="eq-title">Comprenez en <em>2 minutes</em> pourquoi votre ventre gonfle — et comment y mettre fin.</h1>
+    <p class="eq-sub">Ce quiz construit votre profil digestif personnalisé. Aucune promesse miracle — juste votre physiologie.</p>
+    <span class="eq-label" style="margin-bottom:14px;">POUR COMMENCER, VOTRE TRANCHE D'ÂGE :</span>
+    <div class="eq-grid">
+      <div class="eq-photo" onclick="eqAge(this)">
+        <img src="https://cdn.shopify.com/s/files/1/0941/4010/5040/files/ChatGPT_Image_28_juin_2026_05_29_16.png?v=1782617470" alt="18-25 ans">
+        <div class="eq-photo-lbl">18 – 25 ans</div>
+      </div>
+      <div class="eq-photo" onclick="eqAge(this)">
+        <img src="https://cdn.shopify.com/s/files/1/0941/4010/5040/files/ChatGPT_Image_28_juin_2026_05_29_20.png?v=1782617466" alt="26-35 ans">
+        <div class="eq-photo-lbl">26 – 35 ans</div>
+      </div>
+      <div class="eq-photo" onclick="eqAge(this)">
+        <img src="https://cdn.shopify.com/s/files/1/0941/4010/5040/files/ChatGPT_Image_28_juin_2026_05_29_24.png?v=1782617466" alt="36-45 ans">
+        <div class="eq-photo-lbl">36 – 45 ans</div>
+      </div>
+      <div class="eq-photo" onclick="eqAge(this)">
+        <img src="https://cdn.shopify.com/s/files/1/0941/4010/5040/files/ChatGPT_Image_28_juin_2026_05_29_28.png?v=1782617466" alt="46 ans et plus">
+        <div class="eq-photo-lbl">46 ans et plus</div>
+      </div>
+    </div>
+    <div class="eq-unlock"><a onclick="eqGo(1)">Passer le quiz &amp; débloquer -50% sur ma cure →</a></div>
+    <div class="eq-doc">
+      <div class="eq-doc-av"><img src="https://cdn.shopify.com/s/files/1/0941/4010/5040/files/IMG_3462.webp?v=1782339861" alt="Dr. Claire Fontaine"></div>
+      <div><small>Quiz pensé avec</small><strong>Dr. Claire Fontaine</strong><em>Nutritionniste diplômée</em></div>
+    </div>
+    <div class="eq-restart"><a onclick="eqRestart()">↺ Recommencer</a></div>
   </div>
-  <div class="eq-prog-wrap"><div class="eq-prog-bar" id="eqBar"></div></div>
-  <div class="eq-prog-label" id="eqProgLabel"></div>
 
-  <div class="eq-box" id="eqBox">
-
-    <!-- 0 — AGE -->
-    <div class="eq-step active" data-step="0">
-      <span class="eq-label">Analyse personnalisée</span>
-      <h1 class="eq-title">Comprenez en <em>2 minutes</em> pourquoi votre ventre gonfle — et comment y mettre fin.</h1>
-      <p class="eq-sub">Ce quiz construit votre profil digestif personnalisé. Aucune promesse miracle — juste votre physiologie.</p>
-      <span class="eq-label" style="margin-bottom:14px;">POUR COMMENCER, VOTRE TRANCHE D'ÂGE :</span>
-      <div class="eq-grid">
-        <div class="eq-photo" onclick="eqAge(this)">
-          <img src="https://cdn.shopify.com/s/files/1/0941/4010/5040/files/ChatGPT_Image_28_juin_2026_05_29_16.png?v=1782617470" alt="18-25 ans">
-          <div class="eq-photo-lbl">18 – 25 ans</div>
-        </div>
-        <div class="eq-photo" onclick="eqAge(this)">
-          <img src="https://cdn.shopify.com/s/files/1/0941/4010/5040/files/ChatGPT_Image_28_juin_2026_05_29_20.png?v=1782617466" alt="26-35 ans">
-          <div class="eq-photo-lbl">26 – 35 ans</div>
-        </div>
-        <div class="eq-photo" onclick="eqAge(this)">
-          <img src="https://cdn.shopify.com/s/files/1/0941/4010/5040/files/ChatGPT_Image_28_juin_2026_05_29_24.png?v=1782617466" alt="36-45 ans">
-          <div class="eq-photo-lbl">36 – 45 ans</div>
-        </div>
-        <div class="eq-photo" onclick="eqAge(this)">
-          <img src="https://cdn.shopify.com/s/files/1/0941/4010/5040/files/ChatGPT_Image_28_juin_2026_05_29_28.png?v=1782617466" alt="46 ans et plus">
-          <div class="eq-photo-lbl">46 ans et plus</div>
-        </div>
-      </div>
-      <div class="eq-unlock"><a onclick="eqGo(1)">Passer le quiz &amp; débloquer -50% sur ma cure →</a></div>
-      <div class="eq-doc">
-        <div class="eq-doc-av"><img src="https://cdn.shopify.com/s/files/1/0941/4010/5040/files/IMG_3462.webp?v=1782339861" alt="Dr. Claire Fontaine"></div>
-        <div><small>Quiz pensé avec</small><strong>Dr. Claire Fontaine</strong><em>Nutritionniste diplômée</em></div>
-      </div>
-      <div class="eq-restart"><a onclick="eqRestart()">↺ Recommencer</a></div>
+  <!-- Q1 -->
+  <div class="eq-step" data-step="1">
+    <div class="eq-back" onclick="eqGo(0)"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Retour</div>
+    <span class="eq-label">Question 1 / 12</span>
+    <h2 class="eq-title">Où ressentez-vous le gonflement ou la <em>lourdeur</em> ?</h2>
+    <p class="eq-hint">Plusieurs réponses possibles</p>
+    <div class="eq-opts">
+      <div class="eq-opt" onclick="eqM(this,1)"><strong>Ventre</strong> — ballonné ou tendu</div>
+      <div class="eq-opt" onclick="eqM(this,1)"><strong>Ventre le matin</strong> — avant même de manger</div>
+      <div class="eq-opt" onclick="eqM(this,1)"><strong>Bas ventre</strong> — tension et inconfort</div>
+      <div class="eq-opt" onclick="eqM(this,1)"><strong>Partout</strong> — sensation générale de lourdeur</div>
     </div>
-
-    <!-- Q1 -->
-    <div class="eq-step" data-step="1">
-      <div class="eq-back" onclick="eqGo(0)"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Retour</div>
-      <span class="eq-label">Question 1 / 12</span>
-      <h2 class="eq-title">Où ressentez-vous le gonflement ou la <em>lourdeur</em> ?</h2>
-      <p class="eq-hint">Plusieurs réponses possibles</p>
-      <div class="eq-opts">
-        <div class="eq-opt" onclick="eqM(this,1)"><strong>Ventre</strong> — ballonné ou tendu</div>
-        <div class="eq-opt" onclick="eqM(this,1)"><strong>Ventre le matin</strong> — avant même de manger</div>
-        <div class="eq-opt" onclick="eqM(this,1)"><strong>Bas ventre</strong> — tension et inconfort en continu</div>
-        <div class="eq-opt" onclick="eqM(this,1)"><strong>Partout</strong> — sensation générale de lourdeur</div>
-      </div>
-      <button class="eq-btn" id="b1" onclick="eqGo(2)">Continuer</button>
-      <div class="eq-restart"><a onclick="eqRestart()">↺ Recommencer</a></div>
-    </div>
-
-    <!-- Q2 -->
-    <div class="eq-step" data-step="2">
-      <div class="eq-back" onclick="eqGo(1)"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Retour</div>
-      <span class="eq-label">Question 2 / 12</span>
-      <h2 class="eq-title">À quel moment le ressentez-vous <em>le plus</em> ?</h2>
-      <div class="eq-opts">
-        <div class="eq-opt" onclick="eqS(this,2)"><strong>Au réveil</strong> — ventre déjà gonflé le matin</div>
-        <div class="eq-opt" onclick="eqS(this,2)"><strong>Après chaque repas</strong> — même un repas léger</div>
-        <div class="eq-opt" onclick="eqS(this,2)"><strong>En fin de journée</strong> — ça s'accumule au fil des heures</div>
-        <div class="eq-opt" onclick="eqS(this,2)"><strong>En permanence</strong> — peu importe le moment</div>
-      </div>
-      <button class="eq-btn" id="b2" onclick="eqGo(3)">Continuer</button>
-      <div class="eq-restart"><a onclick="eqRestart()">↺ Recommencer</a></div>
-    </div>
-
-    <!-- Q3 -->
-    <div class="eq-step" data-step="3">
-      <div class="eq-back" onclick="eqGo(2)"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Retour</div>
-      <span class="eq-label">Question 3 / 12</span>
-      <h2 class="eq-title">Depuis combien de temps <em>cela dure-t-il</em> ?</h2>
-      <div class="eq-opts">
-        <div class="eq-opt" onclick="eqS(this,3)">Moins de 6 mois</div>
-        <div class="eq-opt" onclick="eqS(this,3)">Entre 6 mois et 2 ans</div>
-        <div class="eq-opt" onclick="eqS(this,3)">Entre 2 et 5 ans</div>
-        <div class="eq-opt" onclick="eqS(this,3)">Plus de 5 ans</div>
-        <div class="eq-opt" onclick="eqS(this,3)">J'ai toujours connu ça</div>
-      </div>
-      <button class="eq-btn" id="b3" onclick="eqGo(4)">Continuer</button>
-      <div class="eq-restart"><a onclick="eqRestart()">↺ Recommencer</a></div>
-    </div>
-
-    <!-- Q4 -->
-    <div class="eq-step" data-step="4">
-      <div class="eq-back" onclick="eqGo(3)"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Retour</div>
-      <span class="eq-label">Question 4 / 12</span>
-      <h2 class="eq-title">Reconnaissez-vous <em>l'un de ces signes</em> ?</h2>
-      <p class="eq-hint">Cochez ceux qui vous parlent</p>
-      <div class="eq-opts">
-        <div class="eq-opt" onclick="eqM(this,4)">Mon <strong>jean serre</strong> en fin de journée mais pas le matin</div>
-        <div class="eq-opt" onclick="eqM(this,4)">J'ai pris <strong>2 à 5 kg</strong> que je n'arrive pas à perdre</div>
-        <div class="eq-opt" onclick="eqM(this,4)">Mon <strong>ventre gonfle vite</strong> après les repas</div>
-        <div class="eq-opt" onclick="eqM(this,4)">J'entends des <strong>gargouillements</strong> et ressens des gaz</div>
-        <div class="eq-opt" onclick="eqM(this,4)">Mon <strong>ventre change de taille</strong> selon les jours</div>
-      </div>
-      <div class="eq-insight">💡 Ces signes pointent vers une <strong>fermentation intestinale active</strong> — un mécanisme physiologique rarement expliqué clairement. Quand les bactéries produisent des gaz plus vite qu'ils ne sont éliminés, ils s'accumulent et votre ventre gonfle.</div>
-      <button class="eq-btn show" id="b4" onclick="eqGo(5)">Continuer</button>
-      <div class="eq-restart"><a onclick="eqRestart()">↺ Recommencer</a></div>
-    </div>
-
-    <!-- Q5 -->
-    <div class="eq-step" data-step="5">
-      <div class="eq-back" onclick="eqGo(4)"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Retour</div>
-      <span class="eq-label">Question 5 / 12</span>
-      <h2 class="eq-title">Qu'avez-vous <em>déjà essayé</em> contre les ballonnements ?</h2>
-      <p class="eq-hint">Plusieurs réponses possibles</p>
-      <div class="eq-opts">
-        <div class="eq-opt" onclick="eqM(this,5)">Probiotiques</div>
-        <div class="eq-opt" onclick="eqM(this,5)">Régimes (sans gluten, sans lactose...)</div>
-        <div class="eq-opt" onclick="eqM(this,5)">Tisanes / remèdes naturels</div>
-        <div class="eq-opt" onclick="eqM(this,5)">Médicaments / conseils gastro</div>
-        <div class="eq-opt" onclick="eqM(this,5)">Rien encore</div>
-      </div>
-      <button class="eq-btn" id="b5" onclick="eqGo(6)">Continuer</button>
-      <div class="eq-restart"><a onclick="eqRestart()">↺ Recommencer</a></div>
-    </div>
-
-    <!-- Q6 -->
-    <div class="eq-step" data-step="6">
-      <div class="eq-back" onclick="eqGo(5)"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Retour</div>
-      <span class="eq-label">Question 6 / 12</span>
-      <h2 class="eq-title">Votre alimentation est <em>plutôt</em>...</h2>
-      <div class="eq-opts">
-        <div class="eq-opt" onclick="eqS(this,6)">Équilibrée — mais le ventre gonfle quand même</div>
-        <div class="eq-opt" onclick="eqS(this,6)">Riche en légumes et fibres</div>
-        <div class="eq-opt" onclick="eqS(this,6)">Variable selon les jours</div>
-        <div class="eq-opt" onclick="eqS(this,6)">Souvent sur le pouce ou en déplacement</div>
-      </div>
-      <button class="eq-btn" id="b6" onclick="eqGo(7)">Continuer</button>
-      <div class="eq-restart"><a onclick="eqRestart()">↺ Recommencer</a></div>
-    </div>
-
-    <!-- Q7 -->
-    <div class="eq-step" data-step="7">
-      <div class="eq-back" onclick="eqGo(6)"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Retour</div>
-      <span class="eq-label">Question 7 / 12</span>
-      <h2 class="eq-title">Votre niveau de <em>stress</em> au quotidien ?</h2>
-      <div class="eq-opts">
-        <div class="eq-opt" onclick="eqS(this,7)">Faible — je me sens globalement sereine</div>
-        <div class="eq-opt" onclick="eqS(this,7)">Modéré — quelques tensions régulières</div>
-        <div class="eq-opt" onclick="eqS(this,7)">Élevé — je me sens souvent sous pression</div>
-        <div class="eq-opt" onclick="eqS(this,7)">Très élevé — stress chronique ou anxiété</div>
-      </div>
-      <button class="eq-btn" id="b7" onclick="eqGo(8)">Continuer</button>
-      <div class="eq-restart"><a onclick="eqRestart()">↺ Recommencer</a></div>
-    </div>
-
-    <!-- Q8 -->
-    <div class="eq-step" data-step="8">
-      <div class="eq-back" onclick="eqGo(7)"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Retour</div>
-      <span class="eq-label">Question 8 / 12</span>
-      <h2 class="eq-title">Avez-vous des <em>inconforts digestifs</em> associés ?</h2>
-      <p class="eq-hint">Plusieurs réponses possibles</p>
-      <div class="eq-opts">
-        <div class="eq-opt" onclick="eqM(this,8)">Douleurs ou crampes abdominales</div>
-        <div class="eq-opt" onclick="eqM(this,8)">Transit irrégulier (constipation ou diarrhée)</div>
-        <div class="eq-opt" onclick="eqM(this,8)">Brûlures d'estomac / reflux</div>
-        <div class="eq-opt" onclick="eqM(this,8)">Nausées après les repas</div>
-        <div class="eq-opt" onclick="eqM(this,8)">Aucun inconfort associé</div>
-      </div>
-      <button class="eq-btn" id="b8" onclick="eqGo(9)">Continuer</button>
-      <div class="eq-restart"><a onclick="eqRestart()">↺ Recommencer</a></div>
-    </div>
-
-    <!-- Q9 -->
-    <div class="eq-step" data-step="9">
-      <div class="eq-back" onclick="eqGo(8)"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Retour</div>
-      <span class="eq-label">Question 9 / 12</span>
-      <h2 class="eq-title">Comment <em>dormez-vous</em> en général ?</h2>
-      <div class="eq-opts">
-        <div class="eq-opt" onclick="eqS(this,9)">Très bien — 7h+ de sommeil récupérateur</div>
-        <div class="eq-opt" onclick="eqS(this,9)">Correctement — quelques réveils nocturnes</div>
-        <div class="eq-opt" onclick="eqS(this,9)">Mal — difficultés à m'endormir ou réveils fréquents</div>
-        <div class="eq-opt" onclick="eqS(this,9)">Très mal — sommeil non récupérateur</div>
-      </div>
-      <button class="eq-btn" id="b9" onclick="eqGo(10)">Continuer</button>
-      <div class="eq-restart"><a onclick="eqRestart()">↺ Recommencer</a></div>
-    </div>
-
-    <!-- Q10 -->
-    <div class="eq-step" data-step="10">
-      <div class="eq-back" onclick="eqGo(9)"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Retour</div>
-      <span class="eq-label">Question 10 / 12</span>
-      <h2 class="eq-title">Votre activité <em>physique</em> est...</h2>
-      <div class="eq-opts">
-        <div class="eq-opt" onclick="eqS(this,10)">Intense — sport régulier plusieurs fois par semaine</div>
-        <div class="eq-opt" onclick="eqS(this,10)">Modérée — marche quotidienne ou sport occasionnel</div>
-        <div class="eq-opt" onclick="eqS(this,10)">Faible — mode de vie sédentaire</div>
-        <div class="eq-opt" onclick="eqS(this,10)">Très faible — peu de mouvement au quotidien</div>
-      </div>
-      <button class="eq-btn" id="b10" onclick="eqGo(11)">Continuer</button>
-      <div class="eq-restart"><a onclick="eqRestart()">↺ Recommencer</a></div>
-    </div>
-
-    <!-- Q11 -->
-    <div class="eq-step" data-step="11">
-      <div class="eq-back" onclick="eqGo(10)"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Retour</div>
-      <span class="eq-label">Question 11 / 12</span>
-      <h2 class="eq-title">Votre <em>objectif principal</em> ?</h2>
-      <p class="eq-hint">Plusieurs réponses possibles</p>
-      <div class="eq-opts">
-        <div class="eq-opt" onclick="eqM(this,11)">Ne plus gonfler après les repas</div>
-        <div class="eq-opt" onclick="eqM(this,11)">Pouvoir manger normalement sans peur</div>
-        <div class="eq-opt" onclick="eqM(this,11)">Me sentir légère toute la journée</div>
-        <div class="eq-opt" onclick="eqM(this,11)">Rentrer à nouveau dans mes vêtements</div>
-        <div class="eq-opt" onclick="eqM(this,11)">Retrouver confiance en mon corps</div>
-      </div>
-      <button class="eq-btn" id="b11" onclick="eqGo(12)">Continuer</button>
-      <div class="eq-restart"><a onclick="eqRestart()">↺ Recommencer</a></div>
-    </div>
-
-    <!-- Q12 -->
-    <div class="eq-step" data-step="12">
-      <div class="eq-back" onclick="eqGo(11)"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Retour</div>
-      <span class="eq-label">Question 12 / 12</span>
-      <h2 class="eq-title">Êtes-vous prête à suivre une <em>cure de 1 à 3 mois</em> pour des résultats durables ?</h2>
-      <p class="eq-sub">Le confort digestif se construit progressivement — la physiologie demande du temps.</p>
-      <div class="eq-row">
-        <button class="eq-btn-yes" onclick="eqGo(13)">✓ Oui, je suis prête</button>
-        <button class="eq-btn-no" onclick="eqGo(13)">Non</button>
-      </div>
-      <div class="eq-restart"><a onclick="eqRestart()">↺ Recommencer</a></div>
-    </div>
-
-    <!-- ÉDUCATION -->
-    <div class="eq-step" data-step="13">
-      <div class="eq-back" onclick="eqGo(12)"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Retour</div>
-      <h2 class="eq-title" style="margin-bottom:18px;">Avant d'essayer un produit de plus, <em>lisez ceci.</em></h2>
-      <p class="eq-edu-hi">Probiotiques. Tisanes "détox". Régimes sans gluten, sans lactose. Charbon sans formule.</p>
-      <p class="eq-edu-p">Beaucoup de femmes essaient ces solutions pendant des années — avec des résultats fugaces, jamais durables. Ce n'est pas votre faute.</p>
-      <p class="eq-edu-p"><strong>Aucune de ces solutions n'agit là où le problème commence vraiment : sur la production et l'accumulation des gaz intestinaux.</strong></p>
-      <p class="eq-edu-p">Les bactéries intestinales fermentent les aliments et produisent des gaz. Si ces gaz ne sont pas capturés <strong>au moment précis où ils se forment</strong> — pendant le repas — ils s'accumulent. Et votre ventre gonfle.</p>
-      <div class="eq-insight">💡 Ce n'est pas ce que vous mangez qui est le problème. C'est que personne n'a jamais <strong>capturé les gaz à la source</strong>.</div>
-      <p class="eq-temo-title">TÉMOIGNAGES</p>
-      <div class="eq-temo-grid">
-        <div class="eq-temo-cell"><img src="https://cdn.shopify.com/s/files/1/0941/4010/5040/files/IMG_3486.avif?v=1782515881" alt="Avant après" onerror="this.style.display='none'"></div>
-        <div class="eq-temo-cell" style="display:flex;align-items:center;justify-content:center;font-size:11px;color:#8A8178;text-align:center;padding:10px;">Votre témoignage<br>ici</div>
-        <div class="eq-temo-cell" style="display:flex;align-items:center;justify-content:center;font-size:11px;color:#8A8178;text-align:center;padding:10px;">Votre témoignage<br>ici</div>
-        <div class="eq-temo-cell" style="display:flex;align-items:center;justify-content:center;font-size:11px;color:#8A8178;text-align:center;padding:10px;">Votre témoignage<br>ici</div>
-      </div>
-      <p class="eq-edu-p">Sur la page suivante, vous découvrirez votre <strong>profil digestif personnalisé</strong> basé sur vos réponses, et la cure adaptée à votre physiologie.</p>
-      <button class="eq-btn-solid" onclick="eqGo(14)">Découvrir mon profil</button>
-      <div class="eq-restart"><a onclick="eqRestart()">↺ Recommencer</a></div>
-    </div>
-
-    <!-- LOADING -->
-    <div class="eq-step" data-step="14">
-      <p class="eq-loader-title" id="eqLT">Préparation de votre cure...</p>
-      <div class="eq-circ-wrap">
-        <div class="eq-circ">
-          <svg viewBox="0 0 100 100" width="110" height="110">
-            <circle class="eq-circ-bg" cx="50" cy="50" r="44"/>
-            <circle class="eq-circ-fill" id="eqCF" cx="50" cy="50" r="44"/>
-          </svg>
-          <div class="eq-circ-pct" id="eqCP">0%</div>
-        </div>
-      </div>
-      <div class="eq-ls-list">
-        <div class="eq-ls" id="eqL1"><span class="eq-ls-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Analyse de vos symptômes digestifs...</div>
-        <div class="eq-ls" id="eqL2"><span class="eq-ls-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Identification de votre profil intestinal...</div>
-        <div class="eq-ls" id="eqL3"><span class="eq-ls-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Vérification du dosage adapté...</div>
-        <div class="eq-ls" id="eqL4"><span class="eq-ls-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Configuration de votre cure personnalisée...</div>
-      </div>
-      <div class="eq-restart" style="margin-top:40px;"><a onclick="eqRestart()">↺ Recommencer</a></div>
-    </div>
-
-    <!-- CURE PRÊTE -->
-    <div class="eq-step" data-step="15">
-      <div class="eq-back" onclick="eqGo(13)"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Retour</div>
-      <div style="text-align:center;padding-top:10px;">
-        <span class="eq-label">VOTRE RITUEL PERSONNALISÉ</span>
-        <div class="eq-ready-badge"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Compatible avec votre physiologie</div>
-        <h2 class="eq-title" style="margin-bottom:6px;">Votre cure digestive est prête à être commencée.</h2>
-        <button class="eq-btn-solid" onclick="eqGo(16)">Découvrir ma cure adaptée</button>
-        <p class="eq-guarantee">Garantie satisfaite ou remboursée — sans formulaire ni photos.</p>
-      </div>
-      <div class="eq-restart"><a onclick="eqRestart()">↺ Recommencer</a></div>
-    </div>
-
-    <!-- CONFIRMATION -->
-    <div class="eq-step" data-step="16">
-      <div class="eq-back" onclick="eqGo(15)"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Retour</div>
-      <span class="eq-label" style="text-align:left;display:block;">UNE DERNIÈRE CHOSE :</span>
-      <h2 class="eq-title">Êtes-vous prête à enfin comprendre votre ventre et <em>retrouver le confort naturellement</em> ?</h2>
-      <div class="eq-row">
-        <button class="eq-btn-yes" onclick="eqGo(17)">✓ Oui, je suis prête</button>
-        <button class="eq-btn-no" onclick="eqGo(17)">Non</button>
-      </div>
-      <div class="eq-restart"><a onclick="eqRestart()">↺ Recommencer</a></div>
-    </div>
-
-    <!-- RÉSULTAT PROFIL -->
-    <div class="eq-step" data-step="17">
-      <span class="eq-profil-lbl">VOTRE PROFIL DIGESTIF PERSONNALISÉ</span>
-      <h2 class="eq-profil-name">Votre profil : <em>fermentation intestinale active</em></h2>
-      <div class="eq-metrics">
-        <div class="eq-metric"><div class="eq-metric-icon">💨</div><div class="eq-metric-lbl">Mécanisme</div><div class="eq-metric-val">Gaz + Fermentation</div></div>
-        <div class="eq-metric"><div class="eq-metric-icon">📈</div><div class="eq-metric-lbl">Réversibilité</div><div class="eq-metric-val">Très bonne</div></div>
-        <div class="eq-metric"><div class="eq-metric-icon">🌿</div><div class="eq-metric-lbl">Cure</div><div class="eq-metric-val">1–3 mois</div></div>
-      </div>
-      <div class="eq-prod-img-wrap">
-        <img class="eq-prod-main" src="https://cdn.shopify.com/s/files/1/0941/4010/5040/files/IMG_3516.PNG" alt="Eliora" onerror="this.src='https://cdn.shopify.com/s/files/1/0941/4010/5040/files/Kaching-Bundles-IMG_3421.png?v=1782225944'">
-        <div class="eq-prod-badges">
-          <div class="eq-badge-pill"><div class="eq-badge-stars">★★★★★</div>Noté<br>4,8/5</div>
-          <div class="eq-badge-pill"><small>Ingrédients</small>100%<br>naturels</div>
-        </div>
-        <div class="eq-satisfy-badge">SATISFAIT<span>90</span>JOURS REMBOURSÉ</div>
-      </div>
-      <a href="/products/gelule-anti-ballonnement" class="eq-cta">Découvrir ma cure adaptée →</a>
-      <p class="eq-guarantee">Garantie satisfaite ou remboursée — sans formulaire ni photos.</p>
-      <div class="eq-trust">
-        <span><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Livraison offerte</span>
-        <span><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Sans accoutumance</span>
-        <span><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Garantie 90 jours</span>
-      </div>
-      <div class="eq-restart"><a onclick="eqRestart()">↺ Recommencer</a></div>
-    </div>
-
+    <div class="eq-btn-wrap"><button class="eq-btn" id="b1" onclick="eqGo(2)">Continuer</button></div>
+    <div class="eq-restart"><a onclick="eqRestart()">↺ Recommencer</a></div>
   </div>
+
+  <!-- Q2 -->
+  <div class="eq-step" data-step="2">
+    <div class="eq-back" onclick="eqGo(1)"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Retour</div>
+    <span class="eq-label">Question 2 / 12</span>
+    <h2 class="eq-title">À quel moment le ressentez-vous <em>le plus</em> ?</h2>
+    <div class="eq-opts">
+      <div class="eq-opt" onclick="eqS(this,2)"><strong>Au réveil</strong> — ventre déjà gonflé le matin</div>
+      <div class="eq-opt" onclick="eqS(this,2)"><strong>Après chaque repas</strong> — même léger</div>
+      <div class="eq-opt" onclick="eqS(this,2)"><strong>En fin de journée</strong> — ça s'accumule</div>
+      <div class="eq-opt" onclick="eqS(this,2)"><strong>En permanence</strong> — peu importe le moment</div>
+    </div>
+    <div class="eq-btn-wrap"><button class="eq-btn" id="b2" onclick="eqGo(3)">Continuer</button></div>
+    <div class="eq-restart"><a onclick="eqRestart()">↺ Recommencer</a></div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="eq-step" data-step="3">
+    <div class="eq-back" onclick="eqGo(2)"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Retour</div>
+    <span class="eq-label">Question 3 / 12</span>
+    <h2 class="eq-title">Depuis combien de temps <em>cela dure-t-il</em> ?</h2>
+    <div class="eq-opts">
+      <div class="eq-opt" onclick="eqS(this,3)">Moins de 6 mois</div>
+      <div class="eq-opt" onclick="eqS(this,3)">Entre 6 mois et 2 ans</div>
+      <div class="eq-opt" onclick="eqS(this,3)">Entre 2 et 5 ans</div>
+      <div class="eq-opt" onclick="eqS(this,3)">Plus de 5 ans</div>
+      <div class="eq-opt" onclick="eqS(this,3)">J'ai toujours connu ça</div>
+    </div>
+    <div class="eq-btn-wrap"><button class="eq-btn" id="b3" onclick="eqGo(4)">Continuer</button></div>
+    <div class="eq-restart"><a onclick="eqRestart()">↺ Recommencer</a></div>
+  </div>
+
+  <!-- Q4 -->
+  <div class="eq-step" data-step="4">
+    <div class="eq-back" onclick="eqGo(3)"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Retour</div>
+    <span class="eq-label">Question 4 / 12</span>
+    <h2 class="eq-title">Reconnaissez-vous <em>l'un de ces signes</em> ?</h2>
+    <p class="eq-hint">Cochez ceux qui vous parlent</p>
+    <div class="eq-opts">
+      <div class="eq-opt" onclick="eqM(this,4)">Mon <strong>jean serre</strong> en fin de journée mais pas le matin</div>
+      <div class="eq-opt" onclick="eqM(this,4)">J'ai pris <strong>2 à 5 kg</strong> que je n'arrive pas à perdre</div>
+      <div class="eq-opt" onclick="eqM(this,4)">Mon <strong>ventre gonfle vite</strong> après les repas</div>
+      <div class="eq-opt" onclick="eqM(this,4)">J'entends des <strong>gargouillements</strong> et ressens des gaz</div>
+      <div class="eq-opt" onclick="eqM(this,4)">Mon <strong>ventre change de taille</strong> selon les jours</div>
+    </div>
+    <div class="eq-insight">💡 Ces signes pointent vers une <strong>fermentation intestinale active</strong> — quand les bactéries produisent des gaz plus vite qu'ils ne sont éliminés, ils s'accumulent et votre ventre gonfle.</div>
+    <div class="eq-btn-wrap"><button class="eq-btn show" id="b4" onclick="eqGo(5)">Continuer</button></div>
+    <div class="eq-restart"><a onclick="eqRestart()">↺ Recommencer</a></div>
+  </div>
+
+  <!-- Q5 -->
+  <div class="eq-step" data-step="5">
+    <div class="eq-back" onclick="eqGo(4)"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Retour</div>
+    <span class="eq-label">Question 5 / 12</span>
+    <h2 class="eq-title">Qu'avez-vous <em>déjà essayé</em> ?</h2>
+    <p class="eq-hint">Plusieurs réponses possibles</p>
+    <div class="eq-opts">
+      <div class="eq-opt" onclick="eqM(this,5)">Probiotiques</div>
+      <div class="eq-opt" onclick="eqM(this,5)">Régimes (sans gluten, sans lactose...)</div>
+      <div class="eq-opt" onclick="eqM(this,5)">Tisanes / remèdes naturels</div>
+      <div class="eq-opt" onclick="eqM(this,5)">Médicaments / conseils gastro</div>
+      <div class="eq-opt" onclick="eqM(this,5)">Rien encore</div>
+    </div>
+    <div class="eq-btn-wrap"><button class="eq-btn" id="b5" onclick="eqGo(6)">Continuer</button></div>
+    <div class="eq-restart"><a onclick="eqRestart()">↺ Recommencer</a></div>
+  </div>
+
+  <!-- Q6 -->
+  <div class="eq-step" data-step="6">
+    <div class="eq-back" onclick="eqGo(5)"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Retour</div>
+    <span class="eq-label">Question 6 / 12</span>
+    <h2 class="eq-title">Votre alimentation est <em>plutôt</em>...</h2>
+    <div class="eq-opts">
+      <div class="eq-opt" onclick="eqS(this,6)">Équilibrée — mais le ventre gonfle quand même</div>
+      <div class="eq-opt" onclick="eqS(this,6)">Riche en légumes et fibres</div>
+      <div class="eq-opt" onclick="eqS(this,6)">Variable selon les jours</div>
+      <div class="eq-opt" onclick="eqS(this,6)">Souvent sur le pouce ou en déplacement</div>
+    </div>
+    <div class="eq-btn-wrap"><button class="eq-btn" id="b6" onclick="eqGo(7)">Continuer</button></div>
+    <div class="eq-restart"><a onclick="eqRestart()">↺ Recommencer</a></div>
+  </div>
+
+  <!-- Q7 -->
+  <div class="eq-step" data-step="7">
+    <div class="eq-back" onclick="eqGo(6)"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Retour</div>
+    <span class="eq-label">Question 7 / 12</span>
+    <h2 class="eq-title">Votre niveau de <em>stress</em> au quotidien ?</h2>
+    <div class="eq-opts">
+      <div class="eq-opt" onclick="eqS(this,7)">Faible — je me sens globalement sereine</div>
+      <div class="eq-opt" onclick="eqS(this,7)">Modéré — quelques tensions régulières</div>
+      <div class="eq-opt" onclick="eqS(this,7)">Élevé — je me sens souvent sous pression</div>
+      <div class="eq-opt" onclick="eqS(this,7)">Très élevé — stress chronique ou anxiété</div>
+    </div>
+    <div class="eq-btn-wrap"><button class="eq-btn" id="b7" onclick="eqGo(8)">Continuer</button></div>
+    <div class="eq-restart"><a onclick="eqRestart()">↺ Recommencer</a></div>
+  </div>
+
+  <!-- Q8 -->
+  <div class="eq-step" data-step="8">
+    <div class="eq-back" onclick="eqGo(7)"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Retour</div>
+    <span class="eq-label">Question 8 / 12</span>
+    <h2 class="eq-title">Avez-vous des <em>inconforts digestifs</em> associés ?</h2>
+    <p class="eq-hint">Plusieurs réponses possibles</p>
+    <div class="eq-opts">
+      <div class="eq-opt" onclick="eqM(this,8)">Douleurs ou crampes abdominales</div>
+      <div class="eq-opt" onclick="eqM(this,8)">Transit irrégulier (constipation ou diarrhée)</div>
+      <div class="eq-opt" onclick="eqM(this,8)">Brûlures d'estomac / reflux</div>
+      <div class="eq-opt" onclick="eqM(this,8)">Nausées après les repas</div>
+      <div class="eq-opt" onclick="eqM(this,8)">Aucun inconfort associé</div>
+    </div>
+    <div class="eq-btn-wrap"><button class="eq-btn" id="b8" onclick="eqGo(9)">Continuer</button></div>
+    <div class="eq-restart"><a onclick="eqRestart()">↺ Recommencer</a></div>
+  </div>
+
+  <!-- Q9 -->
+  <div class="eq-step" data-step="9">
+    <div class="eq-back" onclick="eqGo(8)"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Retour</div>
+    <span class="eq-label">Question 9 / 12</span>
+    <h2 class="eq-title">Comment <em>dormez-vous</em> en général ?</h2>
+    <div class="eq-opts">
+      <div class="eq-opt" onclick="eqS(this,9)">Très bien — 7h+ de sommeil récupérateur</div>
+      <div class="eq-opt" onclick="eqS(this,9)">Correctement — quelques réveils nocturnes</div>
+      <div class="eq-opt" onclick="eqS(this,9)">Mal — difficultés à m'endormir</div>
+      <div class="eq-opt" onclick="eqS(this,9)">Très mal — sommeil non récupérateur</div>
+    </div>
+    <div class="eq-btn-wrap"><button class="eq-btn" id="b9" onclick="eqGo(10)">Continuer</button></div>
+    <div class="eq-restart"><a onclick="eqRestart()">↺ Recommencer</a></div>
+  </div>
+
+  <!-- Q10 -->
+  <div class="eq-step" data-step="10">
+    <div class="eq-back" onclick="eqGo(9)"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Retour</div>
+    <span class="eq-label">Question 10 / 12</span>
+    <h2 class="eq-title">Votre activité <em>physique</em> est...</h2>
+    <div class="eq-opts">
+      <div class="eq-opt" onclick="eqS(this,10)">Intense — sport régulier plusieurs fois par semaine</div>
+      <div class="eq-opt" onclick="eqS(this,10)">Modérée — marche quotidienne ou sport occasionnel</div>
+      <div class="eq-opt" onclick="eqS(this,10)">Faible — mode de vie sédentaire</div>
+      <div class="eq-opt" onclick="eqS(this,10)">Très faible — peu de mouvement au quotidien</div>
+    </div>
+    <div class="eq-btn-wrap"><button class="eq-btn" id="b10" onclick="eqGo(11)">Continuer</button></div>
+    <div class="eq-restart"><a onclick="eqRestart()">↺ Recommencer</a></div>
+  </div>
+
+  <!-- Q11 -->
+  <div class="eq-step" data-step="11">
+    <div class="eq-back" onclick="eqGo(10)"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Retour</div>
+    <span class="eq-label">Question 11 / 12</span>
+    <h2 class="eq-title">Votre <em>objectif principal</em> ?</h2>
+    <p class="eq-hint">Plusieurs réponses possibles</p>
+    <div class="eq-opts">
+      <div class="eq-opt" onclick="eqM(this,11)">Ne plus gonfler après les repas</div>
+      <div class="eq-opt" onclick="eqM(this,11)">Pouvoir manger normalement sans peur</div>
+      <div class="eq-opt" onclick="eqM(this,11)">Me sentir légère toute la journée</div>
+      <div class="eq-opt" onclick="eqM(this,11)">Rentrer à nouveau dans mes vêtements</div>
+      <div class="eq-opt" onclick="eqM(this,11)">Retrouver confiance en mon corps</div>
+    </div>
+    <div class="eq-btn-wrap"><button class="eq-btn" id="b11" onclick="eqGo(12)">Continuer</button></div>
+    <div class="eq-restart"><a onclick="eqRestart()">↺ Recommencer</a></div>
+  </div>
+
+  <!-- Q12 -->
+  <div class="eq-step" data-step="12">
+    <div class="eq-back" onclick="eqGo(11)"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Retour</div>
+    <span class="eq-label">Question 12 / 12</span>
+    <h2 class="eq-title">Êtes-vous prête à suivre une <em>cure de 1 à 3 mois</em> pour des résultats durables ?</h2>
+    <p class="eq-sub">Le confort digestif se construit progressivement — la physiologie demande du temps.</p>
+    <div class="eq-row">
+      <button class="eq-btn-yes" onclick="eqGo(13)">✓ Oui, je suis prête</button>
+      <button class="eq-btn-no" onclick="eqGo(13)">Non</button>
+    </div>
+    <div class="eq-restart"><a onclick="eqRestart()">↺ Recommencer</a></div>
+  </div>
+
+  <!-- ÉDUCATION -->
+  <div class="eq-step" data-step="13">
+    <div class="eq-back" onclick="eqGo(12)"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Retour</div>
+    <h2 class="eq-title" style="margin-bottom:18px;">Avant d'essayer un produit de plus, <em>lisez ceci.</em></h2>
+    <p class="eq-edu-hi">Probiotiques. Tisanes "détox". Régimes sans gluten, sans lactose. Charbon sans formule.</p>
+    <p class="eq-edu-p">Beaucoup de femmes essaient ces solutions pendant des années — avec des résultats fugaces, jamais durables. Ce n'est pas votre faute.</p>
+    <p class="eq-edu-p"><strong>Aucune de ces solutions n'agit là où le problème commence vraiment : sur la production et l'accumulation des gaz intestinaux.</strong></p>
+    <p class="eq-edu-p">Les bactéries intestinales fermentent les aliments et produisent des gaz. Si ces gaz ne sont pas capturés <strong>au moment précis où ils se forment</strong> — ils s'accumulent. Et votre ventre gonfle.</p>
+    <div class="eq-insight">💡 Ce n'est pas ce que vous mangez qui est le problème. C'est que personne n'a jamais <strong>capturé les gaz à la source</strong>.</div>
+    <span class="eq-temo-title">TÉMOIGNAGES</span>
+    <div class="eq-temo-grid">
+      <div class="eq-temo-cell"><img src="https://cdn.shopify.com/s/files/1/0941/4010/5040/files/IMG_3486.avif?v=1782515881" alt="Avant après" onerror="this.style.display='none'"></div>
+      <div class="eq-temo-cell" style="display:flex;align-items:center;justify-content:center;font-size:11px;color:#8A8178;text-align:center;padding:10px;">À venir</div>
+      <div class="eq-temo-cell" style="display:flex;align-items:center;justify-content:center;font-size:11px;color:#8A8178;text-align:center;padding:10px;">À venir</div>
+      <div class="eq-temo-cell" style="display:flex;align-items:center;justify-content:center;font-size:11px;color:#8A8178;text-align:center;padding:10px;">À venir</div>
+    </div>
+    <p class="eq-edu-p">Sur la page suivante, vous découvrirez votre <strong>profil digestif personnalisé</strong> et la cure adaptée à votre physiologie.</p>
+    <button class="eq-btn-solid" onclick="eqGo(14)">Découvrir mon profil</button>
+    <div class="eq-restart"><a onclick="eqRestart()">↺ Recommencer</a></div>
+  </div>
+
+  <!-- LOADING -->
+  <div class="eq-step" data-step="14">
+    <p class="eq-loader-title" id="eqLT">Préparation de votre cure...</p>
+    <div class="eq-circ-wrap">
+      <div class="eq-circ">
+        <svg viewBox="0 0 100 100" width="110" height="110">
+          <circle class="eq-circ-bg" cx="50" cy="50" r="44"/>
+          <circle class="eq-circ-fill" id="eqCF" cx="50" cy="50" r="44"/>
+        </svg>
+        <div class="eq-circ-pct" id="eqCP">0%</div>
+      </div>
+    </div>
+    <div class="eq-ls-list">
+      <div class="eq-ls" id="eqL1"><span class="eq-ls-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Analyse de vos symptômes digestifs...</div>
+      <div class="eq-ls" id="eqL2"><span class="eq-ls-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Identification de votre profil intestinal...</div>
+      <div class="eq-ls" id="eqL3"><span class="eq-ls-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Vérification du dosage adapté...</div>
+      <div class="eq-ls" id="eqL4"><span class="eq-ls-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Configuration de votre cure personnalisée...</div>
+    </div>
+    <div class="eq-restart" style="margin-top:40px;"><a onclick="eqRestart()">↺ Recommencer</a></div>
+  </div>
+
+  <!-- CURE PRÊTE -->
+  <div class="eq-step" data-step="15">
+    <div class="eq-back" onclick="eqGo(13)"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Retour</div>
+    <div class="eq-ready-center">
+      <span class="eq-label">VOTRE RITUEL PERSONNALISÉ</span>
+      <div class="eq-ready-badge"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Compatible avec votre physiologie</div>
+      <h2 class="eq-title" style="margin-bottom:10px;">Votre cure digestive est prête à être commencée.</h2>
+      <button class="eq-btn-solid" onclick="eqGo(16)">Découvrir ma cure adaptée</button>
+      <p class="eq-guarantee" style="margin-top:12px;">Garantie satisfaite ou remboursée — sans formulaire ni photos.</p>
+    </div>
+    <div class="eq-restart"><a onclick="eqRestart()">↺ Recommencer</a></div>
+  </div>
+
+  <!-- CONFIRMATION -->
+  <div class="eq-step" data-step="16">
+    <div class="eq-back" onclick="eqGo(15)"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Retour</div>
+    <span class="eq-label">UNE DERNIÈRE CHOSE :</span>
+    <h2 class="eq-title">Êtes-vous prête à enfin comprendre votre ventre et <em>retrouver le confort naturellement</em> ?</h2>
+    <div class="eq-row">
+      <button class="eq-btn-yes" onclick="eqGo(17)">✓ Oui, je suis prête</button>
+      <button class="eq-btn-no" onclick="eqGo(17)">Non</button>
+    </div>
+    <div class="eq-restart"><a onclick="eqRestart()">↺ Recommencer</a></div>
+  </div>
+
+  <!-- RÉSULTAT -->
+  <div class="eq-step" data-step="17">
+    <span class="eq-profil-lbl">VOTRE PROFIL DIGESTIF PERSONNALISÉ</span>
+    <h2 class="eq-profil-name">Votre profil : <em>fermentation intestinale active</em></h2>
+    <div class="eq-metrics">
+      <div class="eq-metric"><div class="eq-metric-icon">💨</div><div class="eq-metric-lbl">Mécanisme</div><div class="eq-metric-val">Gaz + Fermentation</div></div>
+      <div class="eq-metric"><div class="eq-metric-icon">📈</div><div class="eq-metric-lbl">Réversibilité</div><div class="eq-metric-val">Très bonne</div></div>
+      <div class="eq-metric"><div class="eq-metric-icon">🌿</div><div class="eq-metric-lbl">Cure</div><div class="eq-metric-val">1–3 mois</div></div>
+    </div>
+    <div class="eq-prod-img-wrap">
+      <img class="eq-prod-main" src="https://cdn.shopify.com/s/files/1/0941/4010/5040/files/IMG_3515.WEBP" alt="Eliora" onerror="this.src='https://cdn.shopify.com/s/files/1/0941/4010/5040/files/Kaching-Bundles-IMG_3421.png?v=1782225944'">
+      <div class="eq-prod-badges">
+        <div class="eq-badge-pill"><div class="eq-badge-stars">★★★★★</div>Noté<br>4,8/5</div>
+        <div class="eq-badge-pill"><small>Ingrédients</small>100%<br>naturels</div>
+      </div>
+      <div class="eq-satisfy-badge">SATISFAIT<span>90</span>JOURS REMBOURSÉ</div>
+    </div>
+    <a href="/products/gelule-anti-ballonnement" class="eq-cta">Découvrir ma cure adaptée →</a>
+    <p class="eq-guarantee">Garantie satisfaite ou remboursée — sans formulaire ni photos.</p>
+    <div class="eq-trust">
+      <span><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Livraison offerte</span>
+      <span><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Sans accoutumance</span>
+      <span><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Garantie 90 jours</span>
+    </div>
+    <div class="eq-restart"><a onclick="eqRestart()">↺ Recommencer</a></div>
+  </div>
+
 </div>
 
 <script>
 var EQ_TOTAL = 17;
 function eqProg(n) {
-  var p = Math.round((n / EQ_TOTAL) * 100);
-  document.getElementById('eqBar').style.width = p + '%';
+  var p = Math.round((n/EQ_TOTAL)*100);
+  document.getElementById('eqBar').style.width = p+'%';
   var lbl = document.getElementById('eqProgLabel');
-  if (n > 0 && n < 13) { lbl.textContent = 'Question ' + n + ' / 12'; }
-  else { lbl.textContent = ''; }
+  lbl.textContent = (n>0 && n<13) ? 'Question '+n+' / 12' : '';
 }
 function eqGo(n) {
   document.querySelectorAll('.eq-step').forEach(function(s){ s.classList.remove('active'); });
-  var t = document.querySelector('[data-step="' + n + '"]');
-  if (t) { t.classList.add('active'); eqProg(n); window.scrollTo({top:0,behavior:'smooth'}); }
-  if (n === 14) { eqLoader(); }
+  var t = document.querySelector('[data-step="'+n+'"]');
+  if(t){ t.classList.add('active'); eqProg(n); window.scrollTo({top:0,behavior:'smooth'}); }
+  if(n===14){ eqLoader(); }
 }
 function eqAge(el) {
   document.querySelectorAll('.eq-photo').forEach(function(c){ c.classList.remove('sel'); });
@@ -502,14 +509,14 @@ function eqS(el, step) {
   el.closest('.eq-opts').querySelectorAll('.eq-opt').forEach(function(o){ o.classList.remove('sel'); });
   el.classList.add('sel');
   var b = document.getElementById('b'+step);
-  if (b) b.classList.add('show');
+  if(b) b.classList.add('show');
   setTimeout(function(){ eqGo(step+1); }, 400);
 }
 function eqM(el, step) {
   el.classList.toggle('sel');
   var any = el.closest('.eq-opts').querySelectorAll('.eq-opt.sel').length > 0;
   var b = document.getElementById('b'+step);
-  if (b) { any ? b.classList.add('show') : b.classList.remove('show'); }
+  if(b){ any ? b.classList.add('show') : b.classList.remove('show'); }
 }
 function eqRestart() {
   document.querySelectorAll('.eq-step').forEach(function(s){ s.classList.remove('active'); });
@@ -517,29 +524,24 @@ function eqRestart() {
   document.querySelectorAll('.eq-photo').forEach(function(c){ c.classList.remove('sel'); });
   document.querySelectorAll('.eq-btn').forEach(function(b){ b.classList.remove('show'); });
   document.querySelector('[data-step="0"]').classList.add('active');
-  eqProg(0);
-  window.scrollTo({top:0,behavior:'smooth'});
+  eqProg(0); window.scrollTo({top:0,behavior:'smooth'});
 }
 function eqLoader() {
-  var pct = 0;
-  var cf = document.getElementById('eqCF');
-  var cp = document.getElementById('eqCP');
-  var lt = document.getElementById('eqLT');
-  var C = 2 * Math.PI * 44;
-  var ls = ['eqL1','eqL2','eqL3','eqL4'];
-  var titles = ['Préparation de votre cure...','Construction de votre profil digestif...','Construction de votre profil digestif...','Construction de votre profil digestif...'];
-  var si = 0;
-  cf.style.strokeDashoffset = C;
-  var iv = setInterval(function(){
+  var pct=0, cf=document.getElementById('eqCF'), cp=document.getElementById('eqCP'), lt=document.getElementById('eqLT');
+  var C=2*Math.PI*44, ls=['eqL1','eqL2','eqL3','eqL4'], si=0;
+  cf.style.strokeDashoffset=C;
+  var iv=setInterval(function(){
     pct++;
-    cf.style.strokeDashoffset = C - (pct/100)*C;
-    cp.textContent = pct + '%';
-    if (pct===25 && si<ls.length){ document.getElementById(ls[si]).classList.add('done'); si++; lt.textContent=titles[1]; }
-    if (pct===50 && si<ls.length){ document.getElementById(ls[si]).classList.add('done'); si++; }
-    if (pct===75 && si<ls.length){ document.getElementById(ls[si]).classList.add('done'); si++; }
-    if (pct===95 && si<ls.length){ document.getElementById(ls[si]).classList.add('done'); si++; }
-    if (pct>=100){ clearInterval(iv); setTimeout(function(){ eqGo(15); },700); }
-  }, 28);
+    cf.style.strokeDashoffset=C-(pct/100)*C;
+    cp.textContent=pct+'%';
+    if(pct===25&&si<ls.length){document.getElementById(ls[si]).classList.add('done');si++;lt.textContent='Construction de votre profil digestif...';}
+    if(pct===55&&si<ls.length){document.getElementById(ls[si]).classList.add('done');si++;}
+    if(pct===78&&si<ls.length){document.getElementById(ls[si]).classList.add('done');si++;}
+    if(pct===95&&si<ls.length){document.getElementById(ls[si]).classList.add('done');si++;}
+    if(pct>=100){clearInterval(iv);setTimeout(function(){eqGo(15);},700);}
+  },28);
 }
 eqProg(0);
 </script>
+</body>
+</html>
