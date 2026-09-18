@@ -27,6 +27,22 @@
     "footer": {
       "type": "footer",
       "blocks": {
+        "text_rDzadg": {
+          "type": "text",
+          "settings": {
+            "title": "Maison Auralis · Qualité Artisanale",
+            "content": "<p>Une question avant de commander ?<br/>contact.maisonauralis@gmail.com<br/>Paiement sécurisé · Livraison offerte · Satisfait ou remboursé 30 jours</p>",
+            "enable_follow_on_shop": true
+          }
+        },
+        "links": {
+          "type": "links",
+          "settings": {
+            "menu": "main-menu",
+            "show_menu_title": true,
+            "menu_title": "Menu"
+          }
+        },
         "newsletter": {
           "type": "newsletter",
           "settings": {
@@ -37,20 +53,12 @@
             "content": "<p>Recevez en avant première nos offres et nos actualités.</p>"
           }
         },
-        "text": {
+        "text_GPPDxN": {
           "type": "text",
           "settings": {
-            "title": "NOTRE MISSION",
-            "content": "<p>Nous aidons les <strong>femmes</strong> à retrouver un ventre<br/>léger, une digestion apaisée et la liberté de<br/>se sentir bien dans leur corps — <strong>chaque jour</strong>.<br/><br/><strong>Eliora</strong> agit à la source du ballonnement —<br/>les gaz — pour les capturer et les éliminer<br/>naturellement, dès le repas.</p>",
+            "title": "À propos",
+            "content": "<p>Chez Auralis, on pense que prendre soin de son pain<br/>commence par les bons gestes, pas par les grands discours.<br/>Le sac Auralis est né d'une idée simple : garder le pain<br/>frais, sans plastique, sans compromis. Fabriqué à la main,<br/>cire d'abeille pure. Parce que le vrai geste responsable,<br/>c'est de ne plus jamais jeter ce qu'on aime.</p>",
             "enable_follow_on_shop": false
-          }
-        },
-        "links": {
-          "type": "links",
-          "settings": {
-            "menu": "footer",
-            "show_menu_title": true,
-            "menu_title": "Informations"
           }
         },
         "links_4JGVGz": {
@@ -63,9 +71,10 @@
         }
       },
       "block_order": [
-        "newsletter",
-        "text",
+        "text_rDzadg",
         "links",
+        "newsletter",
+        "text_GPPDxN",
         "links_4JGVGz"
       ],
       "settings": {
