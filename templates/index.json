@@ -68,8 +68,8 @@
       "name": "Custom Liquid",
       "settings": {
         "full_width": true,
-        "remove_vertical_spacing": false,
-        "remove_horizontal_spacing": false,
+        "remove_vertical_spacing": true,
+        "remove_horizontal_spacing": true,
         "liquid": "<link href=\"https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700&family=Playfair+Display:wght@700&display=swap\" rel=\"stylesheet\">\n\n<style>\n  .avu {\n    font-family: 'Poppins', sans-serif;\n    max-width: 900px;\n    margin: 0 auto;\n    padding: 48px 20px;\n    text-align: center;\n    border-top: 1px solid rgba(26,26,26,0.08);\n    border-bottom: 1px solid rgba(26,26,26,0.08);\n  }\n\n  .avu__eyebrow {\n    font-size: 12px;\n    font-weight: 700;\n    letter-spacing: 0.22em;\n    text-transform: uppercase;\n    color: #C68B3D;\n    margin: 0 0 32px;\n  }\n\n  .avu__logos {\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: center;\n    align-items: center;\n    gap: 48px;\n    margin-bottom: 32px;\n  }\n  .avu__logo {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n  }\n  .avu__logo img {\n    display: block;\n    height: 34px;\n    width: auto;\n    max-width: 140px;\n    object-fit: contain;\n  }\n\n  .avu__divider {\n    width: 44px;\n    height: 1px;\n    background: #C68B3D;\n    margin: 0 auto 20px;\n  }\n\n  .avu__claim {\n    font-size: 16px;\n    font-weight: 700;\n    color: #1A1A1A;\n    margin: 0;\n  }\n\n  @media (max-width: 767px) {\n    .avu { padding: 36px 16px; }\n    .avu__eyebrow { margin-bottom: 26px; }\n    .avu__logos {\n      gap: 28px 24px;\n      margin-bottom: 26px;\n    }\n    .avu__logo {\n      flex: 0 0 42%;\n    }\n    .avu__logo img {\n      height: 28px;\n      max-width: 120px;\n    }\n    .avu__claim { font-size: 14.5px; }\n  }\n</style>\n\n<div class=\"avu\">\n\n  <p class=\"avu__eyebrow\">Vu dans</p>\n\n  <div class=\"avu__logos\">\n    <span class=\"avu__logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/1022/7109/1070/files/Logo_Marmiton__2019__svg_430x_1.avif?v=1789770732\" alt=\"Marmiton\" loading=\"lazy\">\n    </span>\n    <span class=\"avu__logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/1022/7109/1070/files/logo-cuisine-actuelle.webp?v=1789770733\" alt=\"Cuisine Actuelle\" loading=\"lazy\">\n    </span>\n    <span class=\"avu__logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/1022/7109/1070/files/Logo_750g.png?v=1789770734\" alt=\"750g\" loading=\"lazy\">\n    </span>\n  </div>\n\n  <div class=\"avu__divider\"></div>\n  <p class=\"avu__claim\">Recommandé par des experts de la consommation</p>\n\n</div>",
         "background": "",
         "background_gradient": "",
@@ -92,6 +92,7 @@
     },
     "custom_liquid_QCt9f8": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "Custom Liquid",
       "settings": {
         "full_width": true,
