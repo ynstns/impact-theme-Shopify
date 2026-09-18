@@ -139,6 +139,12 @@
             "max_width": 500
           }
         },
+        "liquid_9GiJbA": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<style>\n.product__inventory {\n  padding-top: 6px;\n  padding-bottom: 6px;\n  display: flex;\n  align-items: center;\n  gap: 6px;\n  font-weight: 600;\n  font-size: 12px;\n  line-height: 1.2;\n  color: #c0392b;\n}\n.product__inventory .blink-dot {\n  flex: 0 0 auto;\n  width: 10px;\n  height: 10px;\n  animation: inventoryBlink 1s ease-in-out infinite;\n}\n@keyframes inventoryBlink {\n  0%, 100% { opacity: 1; }\n  50%      { opacity: 0.15; }\n}\n@media (prefers-reduced-motion: reduce) {\n  .product__inventory .blink-dot { animation: none; }\n}\n</style>\n\n<p class=\"product__inventory no-js-hidden\" id=\"Inventory-template--22213608309023__main\" role=\"status\">\n  <svg class=\"blink-dot\" width=\"10\" height=\"10\" viewBox=\"0 0 15 15\" aria-hidden=\"true\">\n    <circle cx=\"7.5\" cy=\"7.5\" r=\"7.5\" fill=\"rgba(255, 0, 0, 0.3)\"></circle>\n    <circle cx=\"7.5\" cy=\"7.5\" r=\"5\" stroke=\"rgb(255, 255, 255)\" stroke-width=\"1\" fill=\"rgb(255, 0, 0)\"></circle>\n  </svg>\n  Plus que quelques sacs en stock\n</p>"
+          }
+        },
         "buy-buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -180,6 +186,7 @@
         "liquid_pyftBY",
         "kaching_bundles_app_block_8xfa9a",
         "image_4bJN4V",
+        "liquid_9GiJbA",
         "buy-buttons",
         "liquid_bbrndy",
         "liquid_i44PrB",
