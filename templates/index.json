@@ -108,8 +108,8 @@
         "ai_gen_block_807afa7_XxTyYf": {
           "type": "ai_gen_block_807afa7",
           "settings": {
-            "before_image": "shopify://shop_images/IMG_5255.jpg",
-            "after_image": "shopify://shop_images/IMG_5254.jpg",
+            "before_image": "shopify://shop_images/IMG_5255.webp",
+            "after_image": "shopify://shop_images/IMG_5254.webp",
             "before_label": "Avant",
             "after_label": "Après",
             "aria_label": "",
@@ -118,15 +118,15 @@
             "border_radius": 16,
             "handle_size": 48,
             "divider_width": 4,
-            "divider_color": "#FFFFFF",
-            "empty_background": "#F5EDE0",
-            "text_color": "#2C1810",
-            "label_background": "#5C3A21",
-            "label_text": "#FFFFFF",
-            "handle_background": "#FFFFFF",
-            "handle_border": "#2C1810",
-            "handle_icon": "#2C1810",
-            "focus_color": "#5C3A21"
+            "divider_color": "#ffffff",
+            "empty_background": "#f5ede0",
+            "text_color": "#2c1810",
+            "label_background": "#5c3a21",
+            "label_text": "#ffffff",
+            "handle_background": "#ffffff",
+            "handle_border": "#2c1810",
+            "handle_icon": "#2c1810",
+            "focus_color": "#5c3a21"
           },
           "blocks": {}
         }
