@@ -27,6 +27,16 @@
     "footer": {
       "type": "footer",
       "blocks": {
+        "newsletter": {
+          "type": "newsletter",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_design_793a4f00-9acb-431c-9696-13ca9ab1807c.png",
+            "image_width": 200,
+            "heading_size": "h4",
+            "title": "Astuces conservation, recettes anti-gaspi et offres en avant-première. Directement dans votre boîte mail.",
+            "content": ""
+          }
+        },
         "text_rDzadg": {
           "type": "text",
           "settings": {
@@ -41,16 +51,6 @@
             "menu": "main-menu",
             "show_menu_title": true,
             "menu_title": "Menu"
-          }
-        },
-        "newsletter": {
-          "type": "newsletter",
-          "settings": {
-            "image": "shopify://shop_images/Untitled_design_793a4f00-9acb-431c-9696-13ca9ab1807c.png",
-            "image_width": 200,
-            "heading_size": "h4",
-            "title": "Astuces conservation, recettes anti-gaspi et offres en avant-première. Directement dans votre boîte mail.",
-            "content": "<p>Recevez en avant première nos offres et nos actualités.</p>"
           }
         },
         "text_GPPDxN": {
@@ -71,9 +71,9 @@
         }
       },
       "block_order": [
+        "newsletter",
         "text_rDzadg",
         "links",
-        "newsletter",
         "text_GPPDxN",
         "links_4JGVGz"
       ],
