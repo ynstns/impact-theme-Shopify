@@ -76,6 +76,19 @@
         "text_color": ""
       }
     },
+    "custom_liquid_87Jgj6": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": true,
+        "remove_horizontal_spacing": true,
+        "liquid": "{{ 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@300;400;500;600&display=swap' | stylesheet_tag }}\n\n<section class=\"asol\">\n  <div class=\"asol__wrap\">\n    <span class=\"asol__eyebrow\">\n      <i></i>Une solution simple et naturelle<i></i>\n    </span>\n    <h2 class=\"asol__title\">\n      Votre pain frais<br>\n      comme au premier jour.\n    </h2>\n  </div>\n  <figure class=\"asol__fig\">\n    <img\n      src=\"https://cdn.shopify.com/s/files/1/0941/4010/5040/files/IMG_4998.png?v=1788574524&width=1600\"\n      srcset=\"https://cdn.shopify.com/s/files/1/0941/4010/5040/files/IMG_4998.png?v=1788574524&width=600 600w,\n              https://cdn.shopify.com/s/files/1/0941/4010/5040/files/IMG_4998.png?v=1788574524&width=900 900w,\n              https://cdn.shopify.com/s/files/1/0941/4010/5040/files/IMG_4998.png?v=1788574524&width=1200 1200w,\n              https://cdn.shopify.com/s/files/1/0941/4010/5040/files/IMG_4998.png?v=1788574524&width=1600 1600w\"\n      sizes=\"100vw\"\n      width=\"1600\"\n      height=\"900\"\n      alt=\"Votre pain frais comme au premier jour\"\n      loading=\"lazy\">\n  </figure>\n</section>\n<style>\n.asol{padding:72px 0 0;font-family:'Inter',sans-serif}\n.asol__wrap{max-width:920px;margin:0 auto;padding:0 20px;text-align:center}\n.asol__eyebrow{display:inline-flex;align-items:center;gap:14px;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#C68B3D;font-weight:600;margin-bottom:22px}\n.asol__eyebrow i{display:block;width:34px;height:1px;background:#C68B3D;opacity:.5}\n.asol__title{\n  font-family:'Playfair Display',serif !important;\n  font-weight:700;\n  letter-spacing:-.01em;\n  font-size:clamp(24px, 6.2vw, 60px);\n  line-height:1.08;\n  color:#3B2A1A;\n  margin:0 0 40px;\n  white-space:normal;\n}\n.asol__fig{margin:0}\n.asol__fig img{display:block;width:100%;height:auto}\n@media(max-width:520px){\n.asol{padding:52px 0 0}\n.asol__wrap{padding:0 18px}\n.asol__eyebrow{gap:10px;font-size:10px}\n.asol__eyebrow i{width:20px}\n}\n</style>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
     "custom_liquid_kpzyiB": {
       "type": "custom-liquid",
       "disabled": true,
@@ -358,6 +371,7 @@
     "slideshow",
     "custom_liquid_rYBC4J",
     "custom_liquid_axjydw",
+    "custom_liquid_87Jgj6",
     "custom_liquid_kpzyiB",
     "custom_liquid_QCt9f8",
     "custom_liquid_iCXxAK",
