@@ -1,6 +1,210 @@
+{% doc %}
+  @prompt
+    je veut que tu me genere un avant apres en format 1,1 et je peut slide pour mettre le avant apres 
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-before-after-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    margin: 0 auto;
+    color: {{ block.settings.text_color }};
+  }
+
+  .ai-before-after-{{ ai_gen_id }}__frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: {{ block.settings.border_radius }}px;
+    background: {{ block.settings.empty_background }};
+    isolation: isolate;
+    touch-action: none;
+  }
+
+  .ai-before-after-{{ ai_gen_id }}__image,
+  .ai-before-after-{{ ai_gen_id }}__placeholder {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .ai-before-after-{{ ai_gen_id }}__image {
+    display: block;
+    object-fit: cover;
+  }
+
+  .ai-before-after-{{ ai_gen_id }}__placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: {{ block.settings.text_color }};
+  }
+
+  .ai-before-after-{{ ai_gen_id }}__placeholder svg {
+    width: 55%;
+    height: 55%;
+    opacity: .35;
+  }
+
+  .ai-before-after-{{ ai_gen_id }}__empty {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 32px);
+    text-align: center;
+    font-size: 13px;
+  }
+
+  .ai-before-after-{{ ai_gen_id }}__after {
+    position: absolute;
+    inset: 0;
+    width: var(--ai-before-after-position);
+    overflow: hidden;
+    border-right: {{ block.settings_divider_width | default: 3 }}px solid {{ block.settings_divider_color }};
+    z-index: 2;
+  }
+
+  .ai-before-after-{{ ai_gen_id }}__after .ai-before-after-{{ ai_gen_id }}__image {
+    width: calc(100% / var(--ai-before-after-position-number));
+    max-width: none;
+  }
+
+  .ai-before-after-{{ ai_gen_id }}__handle {
+    position: absolute;
+    top: 50%;
+    left: var(--ai-before-after-position);
+    z-index: 3;
+    width: {{ block.settings_handle_size }}px;
+    height: {{ block.settings_handle_size }}px;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid {{ block.settings_handle_border }};
+    border-radius: 50%;
+    background: {{ block.settings_handle_background }};
+    color: {{ block.settings_handle_icon }};
+    cursor: ew-resize;
+    box-shadow: 0 2px 10px rgba(0,0,0,.18);
+  }
+
+  .ai-before-after-{{ ai_gen_id }}__handle:focus-visible {
+    outline: 3px solid {{ block.settings_focus_color }};
+    outline-offset: 3px;
+  }
+
+  .ai-before-after-{{ ai_gen_id }}__handle svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .ai-before-after-{{ ai_gen_id }}__label {
+    position: absolute;
+    top: 16px;
+    z-index: 4;
+    padding: 7px 11px;
+    border-radius: 999px;
+    background: {{ block.settings_label_background }};
+    color: {{ block.settings_label_text }};
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .ai-before-after-{{ ai_gen_id }}__label--before { left: 16px; }
+  .ai-before-after-{{ ai_gen_id }}__label--after { right: 16px; }
+
+  @media screen and (max-width: 749px) {
+    .ai-before-after-{{ ai_gen_id }}__handle { width: {{ block.settings_handle_size | times: 0.85 }}px; height: {{ block.settings_handle_size | times: 0.85 }}px; }
+  }
+{% endstyle %}
+
+<before-after-slider-{{ ai_gen_id }} class="ai-before-after-{{ ai_gen_id }}" {{ block.shopify_attributes }} style="--ai-before-after-position: {{ block.settings_start_position }}%; --ai-before-after-position-number: {{ block.settings_start_position | divided_by: 100.0 }};">
+  <div class="ai-before-after-{{ ai_gen_id }}__frame" aria-label="{{ block.settings_aria_label | escape }}">
+    {% if block.settings.before_image %}
+      <img class="ai-before-after-{{ ai_gen_id }}__image" src="{{ block.settings.before_image | image_url: width: 1600 }}" alt="{{ block.settings.before_image.alt | default: block.settings_before_label | escape }}" loading="lazy" width="{{ block.settings.before_image.width }}" height="{{ block.settings.before_image.height }}">
+    {% else %}
+      <div class="ai-before-after-{{ ai_gen_id }}__placeholder">{{ 'image' | placeholder_svg_tag }}<span class="ai-before-after-{{ ai_gen_id }}__empty">Ajoutez l’image « avant »</span></div>
+    {% endif %}
+    <div class="ai-before-after-{{ ai_gen_id }}__after">
+      {% if block.settings.after_image %}<img class="ai-before-after-{{ ai_gen_id }}__image" src="{{ block.settings.after_image | image_url: width: 1600 }}" alt="{{ block.settings.after_image.alt | default: block.settings_after_label | escape }}" loading="lazy" width="{{ block.settings.after_image.width }}" height="{{ block.settings.after_image.height }}">{% endif %}
+    </div>
+    <span class="ai-before-after-{{ ai_gen_id }}__label ai-before-after-{{ ai_gen_id }}__label--before">{{ block.settings_before_label }}</span>
+    <span class="ai-before-after-{{ ai_gen_id }}__label ai-before-after-{{ ai_gen_id }}__label--after">{{ block.settings_after_label }}</span>
+    <button class="ai-before-after-{{ ai_gen_id }}__handle" type="button" aria-label="Déplacer le curseur avant après" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{ block.settings_start_position }}" role="slider">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m8 4-4 8 4 8M16 4l4 8-4 8M4 12h16"/></svg>
+    </button>
+  </div>
+</before-after-slider-{{ ai_gen_id }}>
+
+<script>
+(function(){
+  class BeforeAfterSlider{{ ai_gen_id }} extends HTMLElement {
+    connectedCallback(){
+      this.frame=this.querySelector('.ai-before-after-{{ ai_gen_id }}__frame');
+      this.handle=this.querySelector('.ai-before-after-{{ ai_gen_id }}__handle');
+      this.update=this.update.bind(this);
+      this.frame.addEventListener('pointerdown', this.start.bind(this));
+      this.handle.addEventListener('keydown', this.key.bind(this));
+    }
+    start(event){
+      event.preventDefault();
+      this.move(event);
+      this.frame.setPointerCapture(event.pointerId);
+      this.frame.addEventListener('pointermove', this.moveBound=this.move.bind(this));
+      this.frame.addEventListener('pointerup', this.stopBound=this.stop.bind(this), {once:true});
+    }
+    move(event){
+      const rect=this.frame.getBoundingClientRect();
+      const value=Math.max(0,Math.min(100,((event.clientX-rect.left)/rect.width)*100));
+      this.update(value);
+    }
+    stop(){ this.frame.removeEventListener('pointermove', this.moveBound); }
+    key(event){
+      let value=parseFloat(this.handle.getAttribute('aria-valuenow'));
+      if(event.key==='ArrowLeft') value-=1;
+      else if(event.key==='ArrowRight') value+=1;
+      else return;
+      event.preventDefault(); this.update(Math.max(0,Math.min(100,value)));
+    }
+    update(value){ this.style.setProperty('--ai-before-after-position', value+'%'); this.style.setProperty('--ai-before-after-position-number', value/100); this.handle.setAttribute('aria-valuenow', Math.round(value)); }
+  }
+  customElements.define('before-after-slider-{{ ai_gen_id }}', BeforeAfterSlider{{ ai_gen_id }});
+})();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Avant après carré",
+  "tag": null,
+  "class": "before-after-block",
+  "settings": [
+    {"type":"header","content":"Images"},
+    {"type":"image_picker","id":"before_image","label":"Image avant"},
+    {"type":"image_picker","id":"after_image","label":"Image après"},
+    {"type":"text","id":"before_label","label":"Libellé avant","default":"Avant"},
+    {"type":"text","id":"after_label","label":"Libellé après","default":"Après"},
+    {"type":"text","id":"aria_label","label":"Description accessible","default":"Comparaison avant et après"},
+    {"type":"range","id":"start_position","label":"Position de départ","min":10,"max":90,"step":5,"unit":"%","default":50},
+    {"type":"range","id":"desktop_width_percent","label":"Largeur desktop","min":50,"max":100,"step":5,"unit":"%","default":100},
+    {"type":"header","content":"Style"},
+    {"type":"range","id":"border_radius","label":"Arrondi","min":0,"max":40,"step":2,"unit":"px","default":0},
+    {"type":"range","id":"handle_size","label":"Taille du curseur","min":32,"max":72,"step":4,"unit":"px","default":48},
+    {"type":"color","id":"empty_background","label":"Fond vide","default":"#F5EDE0"},
+    {"type":"color","id":"text_color","label":"Texte","default":"#2C1810"},
+    {"type":"color","id":"label_background","label":"Fond des libellés","default":"#2C1810"},
+    {"type":"color","id":"label_text","label":"Texte des libellés","default":"#FFFFFF"},
+    {"type":"color","id":"handle_background","label":"Fond du curseur","default":"#FFFFFF"},
+    {"type":"color","id":"handle_border","label":"Contour du curseur","default":"#2C1810"},
+    {"type":"color","id":"handle_icon","label":"Icône du curseur","default":"#2C1810"},
+    {"type":"color","id":"focus_color","label":"Contour de focus","default":"#5C3A21"}
+  ],
+  "presets": [{"name":"Avant après carré"}]
+}
 {% endschema %}
