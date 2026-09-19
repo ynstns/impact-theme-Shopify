@@ -31,7 +31,7 @@
     "secondary_button_text_color": "#FFFFFF",
     "product_card_text_color": "#1a1a1a",
     "product_rating_color": "#E0A23C",
-    "product_on_sale_accent": "#D6553F",
+    "product_on_sale_accent": "#000000",
     "product_primary_badge_background": "#1A1A1A",
     "heading_font": "poppins_n4",
     "heading_font_size": "medium",
