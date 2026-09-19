@@ -42,7 +42,7 @@
     "product_color_display": "swatch",
     "product_info_alignment": "start",
     "cart_type": "drawer",
-    "cart_icon": "tote_bag",
+    "cart_icon": "shopping_cart",
     "cart_show_free_shipping_threshold": true,
     "cart_free_shipping_threshold": "0",
     "checkout_accent_color": "#f0c417",
@@ -52,11 +52,6 @@
       "15557474716127144420": {
         "type": "shopify://apps/kaching-bundles/blocks/app-embed-block/6c637362-a106-4a32-94ac-94dcfd68cdb8",
         "disabled": false,
-        "settings": {}
-      },
-      "9388344762370057067": {
-        "type": "shopify://apps/essential-cart-drawer/blocks/app-embed/824bb1f9-5f36-4608-a60c-1f2b6a6f8834",
-        "disabled": true,
         "settings": {}
       },
       "13223602749629917723": {
