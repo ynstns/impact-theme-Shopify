@@ -42,7 +42,7 @@
           "settings": {
             "title": "Maison Auralis · Qualité Artisanale",
             "content": "<p>Une question avant de commander ?<br/>contact.maisonauralis@gmail.com<br/>Paiement sécurisé · Livraison offerte · Satisfait ou remboursé 30 jours</p>",
-            "enable_follow_on_shop": true
+            "enable_follow_on_shop": false
           }
         },
         "links": {
