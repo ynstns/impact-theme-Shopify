@@ -21,18 +21,18 @@
       "settings": {
         "full_width": true,
         "subheading": "",
-        "title": "Nous contacter ?",
-        "content": "<p><strong>Notre équipe est disponible 7j/7 pour vous accompagner.</strong></p>",
+        "title": "Contactez-nous",
+        "content": "<p>N'hésitez pas à nous contacter via ce formulaire. Nous nous efforcerons de vous répondre dans un délai de 24 à 48 heures maximum. </p><p>Maison Auralis vous remercie pour votre confiance.</p>",
         "text_position": "start",
         "contact_form_size": "large",
-        "background": "",
+        "background": "#FFFFFF",
         "background_gradient": "",
         "text_color": "",
-        "heading_color": "#C9785B",
+        "heading_color": "#5C3A21",
         "heading_gradient": "",
-        "contact_background": "#FFFFFF",
+        "contact_background": "#ffffff",
         "contact_text_color": "",
-        "button_background": "#C9785B",
+        "button_background": "#5C3A21",
         "button_text_color": ""
       }
     }
