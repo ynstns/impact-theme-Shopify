@@ -400,22 +400,46 @@
         "item_w8NHT4": {
           "type": "item",
           "settings": {
-            "title": "How long will it take to get my orders?",
-            "content": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.</p>"
+            "title": "Est-ce que ma baguette rentre dedans ?",
+            "content": "<p>Oui. Le format 30×40 cm accueille une baguette entière, une miche, un pain de campagne ou une brioche. Le tissu est souple et s'adapte à la forme.</p>"
           }
         },
         "item_xijMUT": {
           "type": "item",
           "settings": {
-            "title": "Any question?",
-            "content": "<p>You can contact us through our contact page! We will be happy to assist you.</p>"
+            "title": "Est-ce que c'est hygiénique ?",
+            "content": "<p>Oui. La cire d'abeille possède des propriétés naturellement antibactériennes. Un nettoyage à l'eau froide avec une éponge suffit après chaque utilisation.</p>"
+          }
+        },
+        "item_Wkyz3K": {
+          "type": "item",
+          "settings": {
+            "title": "Ça ne colle pas au pain ?",
+            "content": "<p>Non. Le tissu enduit est lisse à l'intérieur. Le pain se glisse et se retire sans accrocher, sans résidu.</p>"
+          }
+        },
+        "item_PU6akF": {
+          "type": "item",
+          "settings": {
+            "title": "Est-ce que ça remplace vraiment le film alimentaire ?",
+            "content": "<p>Oui. Plus besoin de plastique ni d'aluminium pour conserver votre pain. Un seul sac remplace des centaines d'emballages jetables.</p>"
+          }
+        },
+        "item_YeYcfJ": {
+          "type": "item",
+          "settings": {
+            "title": "Je vis seule, est-ce que ça vaut le coup quand même ?",
+            "content": "<p>Justement. Quand on vit seul, on jette encore plus de pain rassis. Le sac garde votre pain frais plusieurs jours, vous achetez moins souvent et vous ne gaspillez plus.</p>"
           }
         }
       },
       "block_order": [
         "item_jUR3br",
         "item_w8NHT4",
-        "item_xijMUT"
+        "item_xijMUT",
+        "item_Wkyz3K",
+        "item_PU6akF",
+        "item_YeYcfJ"
       ],
       "name": "FAQ",
       "settings": {
@@ -424,8 +448,8 @@
         "title": "Des questions ? On répond.",
         "content": "",
         "team_avatar_width": 160,
-        "support_hours": "Our customer support is available Monday to Friday: 8am-8:30pm.",
-        "answer_time": "Average answer time: 24h",
+        "support_hours": "Notre service client est disponible 24h/24 et 7j/7 pour vous accompagner et répondre à vos demandes.",
+        "answer_time": "Nous répondons généralement en moins de 24h.",
         "button_text": "",
         "button_url": "",
         "text_position": "center",
