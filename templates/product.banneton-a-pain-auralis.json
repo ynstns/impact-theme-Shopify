@@ -12,8 +12,47 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "title_RWeRt7": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h2"
+          }
+        },
+        "rating_q9aiNJ": {
+          "type": "rating",
+          "settings": {
+            "show_empty": false
+          }
+        },
+        "price_TGmFPw": {
+          "type": "price",
+          "settings": {
+            "show_taxes_notice": false
+          }
+        },
+        "description_pYQbPk": {
+          "type": "description",
+          "settings": {
+            "icon": "none",
+            "icon_width": 20,
+            "collapse_content": false
+          }
+        },
+        "variant_picker_bJhiXz": {
+          "type": "variant_picker",
+          "disabled": true,
+          "settings": {
+            "hide_sold_out_variants": false,
+            "stack_blocks": true,
+            "selector_style": "block",
+            "swatch_selector_style": "swatch",
+            "variant_image_options": "",
+            "size_chart_page": ""
+          }
+        },
         "liquid_PbepQf": {
           "type": "liquid",
+          "disabled": true,
           "settings": {
             "liquid": "{% comment %} MAISON AURALIS — Bloc héro produit Sac à Pain en Cire d'Abeille {% endcomment %}\n\n<link href=\"https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap\" rel=\"stylesheet\">\n\n<style>\n  .auralis-hero {\n    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;\n    color: #1A1A1A;\n    max-width: 640px;\n    margin: 0 auto;\n    padding: 6px 2px;\n  }\n\n  /* TRUST LINE */\n  .auralis-hero__trust {\n    display: flex;\n    align-items: center;\n    flex-wrap: nowrap;\n    gap: 5px;\n    font-size: 11px;\n    margin-bottom: 10px;\n    overflow: hidden;\n  }\n  .auralis-hero__tp-stars {\n    display: inline-flex;\n    gap: 2px;\n    flex-shrink: 0;\n  }\n  .auralis-hero__tp-star {\n    width: 16px;\n    height: 16px;\n    background: #00B67A;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    flex-shrink: 0;\n  }\n  .auralis-hero__tp-star svg { width: 10px; height: 10px; fill: #FFFFFF; }\n  .auralis-hero__tp-logo {\n    width: 16px;\n    height: 16px;\n    min-width: 16px;\n    background: #00B67A;\n    border-radius: 50%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    flex-shrink: 0;\n  }\n  .auralis-hero__tp-logo svg {\n    width: 10px;\n    height: 10px;\n    stroke: #FFFFFF;\n    fill: none;\n    stroke-width: 2.8;\n    stroke-linecap: round;\n    stroke-linejoin: round;\n  }\n  .auralis-hero__trust-text {\n    font-size: 11px;\n    font-weight: 600;\n    color: #1A1A1A;\n    white-space: nowrap;\n    flex-shrink: 0;\n  }\n\n  /* EYEBROW */\n  .auralis-hero__eyebrow {\n    display: inline-block;\n    font-size: 10px;\n    font-weight: 700;\n    letter-spacing: 0.16em;\n    text-transform: uppercase;\n    color: #8A6B2E;\n    background: rgba(198,139,61,0.16);\n    padding: 4px 10px;\n    border-radius: 20px;\n    margin: 0 0 8px;\n  }\n\n  /* TITRE */\n  .auralis-hero__title {\n    font-size: clamp(24px, 6.5vw, 38px);\n    font-weight: 400;\n    line-height: 1.08;\n    letter-spacing: -0.02em;\n    margin: 0 0 10px;\n    color: #1A1A1A;\n  }\n  .auralis-hero__title em {\n    font-style: italic;\n    font-weight: 400;\n    color: #C68B3D;\n  }\n\n  /* DIVIDER */\n  .auralis-hero__divider {\n    width: 40px;\n    height: 2.5px;\n    background: linear-gradient(90deg, #C68B3D, #5C3A21);\n    border-radius: 2px;\n    margin-bottom: 14px;\n  }\n\n  /* DESC */\n  .auralis-hero__desc {\n    font-size: 14px;\n    font-weight: 400;\n    color: #1A1A1A;\n    line-height: 1.65;\n    margin: 0 0 16px;\n  }\n  .auralis-hero__desc strong {\n    font-weight: 700;\n    color: #1A1A1A;\n  }\n  .auralis-hero__desc em {\n    font-style: italic;\n    color: #C68B3D;\n  }\n\n  /* BENEFITS GRID */\n  .auralis-hero__benefits {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    gap: 12px 10px;\n    margin-bottom: 18px;\n  }\n  .auralis-hero__benefit {\n    display: flex;\n    align-items: flex-start;\n    gap: 9px;\n    min-width: 0;\n  }\n  .auralis-hero__benefit-icon {\n    width: 30px;\n    height: 30px;\n    min-width: 30px;\n    border-radius: 50%;\n    border: 1.5px solid rgba(92,58,33,0.35);\n    background: rgba(198,139,61,0.1);\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    flex-shrink: 0;\n  }\n  .auralis-hero__benefit-icon svg {\n    width: 14px;\n    height: 14px;\n    stroke: #5C3A21;\n    fill: none;\n    stroke-width: 1.8;\n    stroke-linecap: round;\n    stroke-linejoin: round;\n  }\n  .auralis-hero__benefit-body { min-width: 0; }\n  .auralis-hero__benefit-title {\n    font-size: 12.5px;\n    font-weight: 600;\n    line-height: 1.2;\n    margin: 0 0 2px;\n    color: #1A1A1A;\n  }\n  .auralis-hero__benefit-text {\n    font-size: 11px;\n    font-weight: 400;\n    line-height: 1.3;\n    color: #8A8178;\n    margin: 0;\n  }\n\n  /* STOCK BAR */\n  .auralis-hero__stock {\n    border-radius: 12px;\n    padding: 12px 0;\n    display: flex;\n    align-items: center;\n    gap: 12px;\n  }\n  .auralis-hero__stock-track {\n    flex: 1;\n    height: 10px;\n    background: #F3DAD7;\n    border-radius: 20px;\n    overflow: hidden;\n  }\n  .auralis-hero__stock-fill {\n    height: 100%;\n    width: 0;\n    background: linear-gradient(90deg, #9E2A24 0%, #C0392B 100%);\n    border-radius: 20px;\n    transition: width 1.6s cubic-bezier(0.22, 1, 0.36, 1);\n  }\n  .auralis-hero__stock-fill.is-filled { width: 91%; }\n  .auralis-hero__stock-label {\n    font-size: 15px;\n    font-weight: 700;\n    color: #C0392B;\n    white-space: nowrap;\n    flex-shrink: 0;\n    letter-spacing: -0.01em;\n  }\n  .auralis-hero__stock-label span {\n    font-size: 10px;\n    font-weight: 600;\n    color: #8A8178;\n    letter-spacing: 0.08em;\n    margin-left: 3px;\n  }\n\n  @media (prefers-reduced-motion: reduce) {\n    .auralis-hero__stock-fill { transition: none; }\n  }\n</style>\n\n<div class=\"auralis-hero\">\n\n  <!-- TRUST LINE -->\n  <div class=\"auralis-hero__trust\">\n    <span class=\"auralis-hero__tp-stars\">\n      <span class=\"auralis-hero__tp-star\"><svg viewBox=\"0 0 24 24\"><polygon points=\"12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26\"/></svg></span>\n      <span class=\"auralis-hero__tp-star\"><svg viewBox=\"0 0 24 24\"><polygon points=\"12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26\"/></svg></span>\n      <span class=\"auralis-hero__tp-star\"><svg viewBox=\"0 0 24 24\"><polygon points=\"12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26\"/></svg></span>\n      <span class=\"auralis-hero__tp-star\"><svg viewBox=\"0 0 24 24\"><polygon points=\"12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26\"/></svg></span>\n      <span class=\"auralis-hero__tp-star\"><svg viewBox=\"0 0 24 24\"><polygon points=\"12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26\"/></svg></span>\n    </span>\n    <span class=\"auralis-hero__trust-text\">Excellent 4.9 · +11 500 foyers conquis</span>\n    <span class=\"auralis-hero__tp-logo\">\n      <svg viewBox=\"0 0 24 24\"><polyline points=\"20 6 9 17 4 12\"/></svg>\n    </span>\n  </div>\n\n  <!-- EYEBROW -->\n  <p class=\"auralis-hero__eyebrow\">🇫🇷 Marque française · fabriqué avec soin</p>\n\n  <!-- TITRE -->\n  <h2 class=\"auralis-hero__title\">Un pain frais plus longtemps, <em>sans plastique autour.</em></h2>\n  <div class=\"auralis-hero__divider\"></div>\n\n  <!-- DESC -->\n  <p class=\"auralis-hero__desc\">\n    Un sac en <strong>coton bio et cire d'abeille</strong>, pensé et fabriqué en France, qui garde votre pain frais plusieurs jours de plus — <em>sans plastique, réutilisable à l'infini.</em>\n  </p>\n\n  <!-- BENEFITS -->\n  <div class=\"auralis-hero__benefits\">\n\n    <div class=\"auralis-hero__benefit\">\n      <div class=\"auralis-hero__benefit-icon\">\n        <svg viewBox=\"0 0 24 24\"><path d=\"M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z\"/></svg>\n      </div>\n      <div class=\"auralis-hero__benefit-body\">\n        <p class=\"auralis-hero__benefit-title\">Fraîcheur prolongée</p>\n        <p class=\"auralis-hero__benefit-text\">Le pain reste frais jusqu'à 5 jours</p>\n      </div>\n    </div>\n\n    <div class=\"auralis-hero__benefit\">\n      <div class=\"auralis-hero__benefit-icon\">\n        <svg viewBox=\"0 0 24 24\"><path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\"/><path d=\"M9 12l2 2 4-4\"/></svg>\n      </div>\n      <div class=\"auralis-hero__benefit-body\">\n        <p class=\"auralis-hero__benefit-title\">Barrière naturelle</p>\n        <p class=\"auralis-hero__benefit-text\">La cire d'abeille limite les moisissures</p>\n      </div>\n    </div>\n\n    <div class=\"auralis-hero__benefit\">\n      <div class=\"auralis-hero__benefit-icon\">\n        <svg viewBox=\"0 0 24 24\"><path d=\"M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z\"/><circle cx=\"12\" cy=\"12\" r=\"3\"/></svg>\n      </div>\n      <div class=\"auralis-hero__benefit-body\">\n        <p class=\"auralis-hero__benefit-title\">Zéro plastique</p>\n        <p class=\"auralis-hero__benefit-text\">Coton et cire d'abeille, 100% naturels</p>\n      </div>\n    </div>\n\n    <div class=\"auralis-hero__benefit\">\n      <div class=\"auralis-hero__benefit-icon\">\n        <svg viewBox=\"0 0 24 24\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><polyline points=\"12 6 12 12 16 14\"/></svg>\n      </div>\n      <div class=\"auralis-hero__benefit-body\">\n        <p class=\"auralis-hero__benefit-title\">Réutilisable</p>\n        <p class=\"auralis-hero__benefit-text\">Lavable et durable pendant des années</p>\n      </div>\n    </div>\n\n  </div>\n\n  <!-- STOCK BAR -->\n  <div class=\"auralis-hero__stock\">\n    <div class=\"auralis-hero__stock-track\">\n      <div class=\"auralis-hero__stock-fill\" id=\"auralisHeroStockFill\"></div>\n    </div>\n    <span class=\"auralis-hero__stock-label\">91% <span>VENDU</span></span>\n  </div>\n\n</div>\n\n<script>\n  (function() {\n    var fill = document.getElementById('auralisHeroStockFill');\n    if (!fill) return;\n    function go() { fill.classList.add('is-filled'); }\n    if ('IntersectionObserver' in window) {\n      var obs = new IntersectionObserver(function(entries) {\n        entries.forEach(function(e) {\n          if (e.isIntersecting) { go(); obs.disconnect(); }\n        });\n      }, { threshold: 0.4 });\n      obs.observe(fill);\n    } else { setTimeout(go, 300); }\n  })();\n</script>"
           }
@@ -34,6 +73,7 @@
         },
         "liquid_Je4jMj": {
           "type": "liquid",
+          "disabled": true,
           "settings": {
             "liquid": "<style>\n.product__inventory {\n  padding-top: 6px;\n  padding-bottom: 6px;\n  display: flex;\n  align-items: center;\n  gap: 6px;\n  font-weight: 600;\n  font-size: 12px;\n  line-height: 1.2;\n  color: #c0392b;\n}\n.product__inventory .blink-dot {\n  flex: 0 0 auto;\n  width: 10px;\n  height: 10px;\n  animation: inventoryBlink 1s ease-in-out infinite;\n}\n@keyframes inventoryBlink {\n  0%, 100% { opacity: 1; }\n  50%      { opacity: 0.15; }\n}\n@media (prefers-reduced-motion: reduce) {\n  .product__inventory .blink-dot { animation: none; }\n}\n</style>\n\n<p class=\"product__inventory no-js-hidden\" id=\"Inventory-template--22213608309023__main\" role=\"status\">\n  <svg class=\"blink-dot\" width=\"10\" height=\"10\" viewBox=\"0 0 15 15\" aria-hidden=\"true\">\n    <circle cx=\"7.5\" cy=\"7.5\" r=\"7.5\" fill=\"rgba(255, 0, 0, 0.3)\"></circle>\n    <circle cx=\"7.5\" cy=\"7.5\" r=\"5\" stroke=\"rgb(255, 255, 255)\" stroke-width=\"1\" fill=\"rgb(255, 0, 0)\"></circle>\n  </svg>\n  Plus que quelques sacs en stock\n</p>"
           }
@@ -57,6 +97,11 @@
         }
       },
       "block_order": [
+        "title_RWeRt7",
+        "rating_q9aiNJ",
+        "price_TGmFPw",
+        "description_pYQbPk",
+        "variant_picker_bJhiXz",
         "liquid_PbepQf",
         "kaching_bundles_app_block_Atkd6C",
         "image_XYYmb6",
