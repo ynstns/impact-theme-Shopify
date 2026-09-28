@@ -12,6 +12,24 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "title_ymggCi": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h2"
+          }
+        },
+        "rating_BeAXLN": {
+          "type": "rating",
+          "settings": {
+            "show_empty": false
+          }
+        },
+        "price_njpDEb": {
+          "type": "price",
+          "settings": {
+            "show_taxes_notice": false
+          }
+        },
         "description_d4xbjR": {
           "type": "description",
           "settings": {
@@ -66,6 +84,9 @@
         }
       },
       "block_order": [
+        "title_ymggCi",
+        "rating_BeAXLN",
+        "price_njpDEb",
         "description_d4xbjR",
         "liquid_PbepQf",
         "kaching_bundles_app_block_Atkd6C",
