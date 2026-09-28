@@ -173,6 +173,48 @@
         "text_color": ""
       }
     },
+    "image_with_text_overlay_piReUF": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "subheading_RmrNcV": {
+          "type": "subheading",
+          "settings": {
+            "text": "Ce que vous jetez chaque semaine"
+          }
+        },
+        "heading_6qHTwY": {
+          "type": "heading",
+          "settings": {
+            "text": "+184€/an de pain… jetés à la poubelle",
+            "heading_tag": "h1"
+          }
+        },
+        "richtext_XBQcpy": {
+          "type": "richtext",
+          "settings": {
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "subheading_RmrNcV",
+        "heading_6qHTwY",
+        "richtext_XBQcpy"
+      ],
+      "name": "Image with text overlay",
+      "settings": {
+        "full_width": true,
+        "allow_transparent_header": false,
+        "enable_parallax": false,
+        "image_size": "auto",
+        "image": "shopify://shop_images/02cde490-2373-460a-8324-ef843596cf97.webp",
+        "mobile_text_position": "place-self-center text-center",
+        "desktop_text_position": "sm:place-self-center sm:text-center",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30
+      }
+    },
     "custom_liquid_feJcWU": {
       "type": "custom-liquid",
       "name": "Custom Liquid",
@@ -473,6 +515,7 @@
     "related_products_rPQ43e",
     "custom_liquid_PYb37W",
     "custom_liquid_ykAYxn",
+    "image_with_text_overlay_piReUF",
     "custom_liquid_feJcWU",
     "custom_liquid_kw8wnd",
     "custom_liquid_gz76kh",
