@@ -24,13 +24,16 @@
         "text_color": ""
       }
     },
+    "1790636183bcd03281": {
+      "type": "_blocks",
+      "settings": {}
+    },
     "footer": {
       "type": "footer",
       "blocks": {
         "newsletter": {
           "type": "newsletter",
           "settings": {
-            "image": "shopify://shop_images/Untitled_design_793a4f00-9acb-431c-9696-13ca9ab1807c.png",
             "image_width": 200,
             "heading_size": "h4",
             "title": "Astuces conservation, recettes anti-gaspi et offres en avant-première. Directement dans votre boîte mail.",
@@ -90,6 +93,7 @@
   },
   "order": [
     "custom_liquid_ebadXt",
+    "1790636183bcd03281",
     "footer"
   ]
 }

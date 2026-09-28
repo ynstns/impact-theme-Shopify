@@ -307,6 +307,7 @@
     },
     "custom_liquid_feJcWU": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "Custom Liquid",
       "settings": {
         "full_width": true,
@@ -320,6 +321,7 @@
     },
     "custom_liquid_kw8wnd": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "Custom Liquid",
       "settings": {
         "full_width": true,
@@ -333,6 +335,7 @@
     },
     "custom_liquid_gz76kh": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "Custom Liquid",
       "settings": {
         "full_width": true,
@@ -346,6 +349,7 @@
     },
     "custom_liquid_kHx98h": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "Custom Liquid",
       "settings": {
         "full_width": true,
@@ -359,6 +363,7 @@
     },
     "custom_liquid_gaPJWC": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "Custom Liquid",
       "settings": {
         "full_width": true,
@@ -402,11 +407,13 @@
       "block_order": [
         "ai_gen_block_807afa7_76wBGH"
       ],
+      "disabled": true,
       "name": "Avant après carré",
       "settings": {}
     },
     "custom_liquid_GdVWbU": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "Custom Liquid",
       "settings": {
         "full_width": true,
@@ -420,6 +427,7 @@
     },
     "custom_liquid_3mjiG9": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "Custom Liquid",
       "settings": {
         "full_width": true,
@@ -433,6 +441,7 @@
     },
     "custom_liquid_kETBGr": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "Custom Liquid",
       "settings": {
         "full_width": true,
@@ -446,6 +455,7 @@
     },
     "custom_liquid_tDbtTJ": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "Custom Liquid",
       "settings": {
         "full_width": true,
@@ -459,6 +469,7 @@
     },
     "custom_liquid_4nUkGi": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "Custom Liquid",
       "settings": {
         "full_width": true,
@@ -524,6 +535,7 @@
         "item_JQAQxP",
         "item_BjkBFn"
       ],
+      "disabled": true,
       "name": "FAQ",
       "settings": {
         "full_width": true,
