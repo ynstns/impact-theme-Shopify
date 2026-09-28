@@ -114,6 +114,39 @@
         "input_text_color": ""
       }
     },
+    "related_products_rPQ43e": {
+      "type": "related-products",
+      "name": "Related products",
+      "settings": {
+        "recommendations_count": 6,
+        "products": [
+          "banneton-a-pain-auralis-rond-ou-ovale",
+          "fouet-a-pain-de-auralis",
+          "kit-boulanger-de-auralis-fouet-a-pain-lame-boulangere",
+          "kit-complet-demarrage-pour-levain",
+          "la-lame-a-pain-artisanale-de-auralis",
+          "la-spatule-de-auralis",
+          "le-guide-du-sac-a-pain-utilisation-entretien-conservation-pdf",
+          "le-sac-a-baguette-auralis-coton-cire-dabeille-70-10-cm",
+          "tapis-de-cuisson-rond-ou-ovale"
+        ],
+        "full_width": true,
+        "stack_products": false,
+        "show_progress_bar": true,
+        "products_per_row_mobile": "1",
+        "products_per_row_desktop": 3,
+        "subheading": "",
+        "title": "Vous aimeriez aussi..",
+        "content": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "product_card_background": "",
+        "product_card_text_color": ""
+      }
+    },
     "custom_liquid_feJcWU": {
       "type": "custom-liquid",
       "name": "Custom Liquid",
@@ -411,6 +444,7 @@
   },
   "order": [
     "main",
+    "related_products_rPQ43e",
     "custom_liquid_feJcWU",
     "custom_liquid_kw8wnd",
     "custom_liquid_gz76kh",
