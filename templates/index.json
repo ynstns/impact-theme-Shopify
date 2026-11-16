@@ -63,21 +63,9 @@
         "text_color": ""
       }
     },
-    "custom_liquid_axjydw": {
-      "type": "custom-liquid",
-      "name": "Custom Liquid",
-      "settings": {
-        "full_width": true,
-        "remove_vertical_spacing": true,
-        "remove_horizontal_spacing": true,
-        "liquid": "{{ 'https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@300;400;500;600&display=swap' | stylesheet_tag }}\n<section class=\"avd\">\n  <div class=\"avd__wrap\">\n    <span class=\"avd__rule\"></span>\n    <span class=\"avd__eyebrow\">Vu dans</span>\n    <div class=\"avd__logos\">\n      <a class=\"avd__logo\" href=\"#\" target=\"_blank\" rel=\"noopener\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0941/4010/5040/files/Marie_Claire_Magazine_logo_svg_430x_c7a8f824-cc3f-4f1d-8ae0-08b4e051002f.avif?v=1784868136&width=200\" alt=\"Marie Claire\" width=\"120\" height=\"34\" loading=\"lazy\">\n      </a>\n      <a class=\"avd__logo\" href=\"#\" target=\"_blank\" rel=\"noopener\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0941/4010/5040/files/ELLE_Magazine_Logo_430x_48493ec8-fedc-4e55-9db8-fcdd41b59f2b.svg?v=1784868136\" alt=\"ELLE\" width=\"90\" height=\"34\" loading=\"lazy\">\n      </a>\n      <a class=\"avd__logo\" href=\"#\" target=\"_blank\" rel=\"noopener\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0941/4010/5040/files/Logo_Marmiton__2019__svg_430x_af43c550-9b41-41bf-85ab-e70ce1756d6e.avif?v=1788573877\" alt=\"Marmiton\" width=\"120\" height=\"34\" loading=\"lazy\">\n      </a>\n      <a class=\"avd__logo avd__logo--mono\" href=\"#\" target=\"_blank\" rel=\"noopener\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0941/4010/5040/files/Logo_750g_png.webp?v=1785114799&width=200&format=webp\" alt=\"750g\" width=\"120\" height=\"34\" loading=\"lazy\">\n      </a>\n    </div>\n    <span class=\"avd__dash\"></span>\n    <p class=\"avd__claim\">Recommandé par des experts de la consommation.</p>\n    <span class=\"avd__rule\"></span>\n  </div>\n</section>\n<style>\n.avd{\n  padding:52px 20px;\n  font-family:inherit;\n}\n.avd__wrap{\n  max-width:1080px;\n  margin:0 auto;\n  text-align:center;\n}\n.avd__rule{\n  display:block;\n  height:1px;\n  background:rgba(198,139,61,.28);\n}\n.avd__eyebrow{\n  display:inline-block;\n  margin:34px 0 26px;\n  font-size:11px;\n  letter-spacing:.24em;\n  text-transform:uppercase;\n  color:#C68B3D;\n  font-weight:600;\n}\n.avd__logos{\n  display:flex;\n  align-items:center;\n  justify-content:center;\n  flex-wrap:wrap;\n  gap:30px 60px;\n}\n.avd__logo{\n  display:block;\n}\n.avd__logo img{\n  height:34px;\n  width:auto;\n  display:block;\n  filter:grayscale(100%);\n  opacity:.85;\n  transition:.3s ease;\n}\n.avd__logo:hover img{\n  filter:grayscale(0);\n  opacity:1;\n}\n.avd__logo--mono img{\n  filter:brightness(0);\n  opacity:1;\n  background:transparent;\n}\n.avd__logo--mono:hover img{\n  filter:brightness(0);\n  opacity:1;\n}\n.avd__dash{\n  display:block;\n  width:38px;\n  height:1px;\n  background:#5C3A21;\n  opacity:.5;\n  margin:28px auto 18px;\n}\n.avd__claim{\n  font-size:clamp(11px, 2.6vw, 14px);\n  font-weight:700;\n  color:#5C3A21;\n  margin:0;\n  white-space:nowrap;\n}\n@media(max-width:640px){\n.avd{\n  padding:40px 18px;\n}\n.avd__eyebrow{\n  margin:28px 0 22px;\n}\n.avd__logos{\n  gap:22px 28px;\n}\n.avd__logo img{\n  height:24px;\n}\n}\n</style>",
-        "background": "",
-        "background_gradient": "",
-        "text_color": ""
-      }
-    },
     "custom_liquid_87Jgj6": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "Custom Liquid",
       "settings": {
         "full_width": true,
@@ -91,6 +79,7 @@
     },
     "custom_liquid_ijkEE6": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "Custom Liquid",
       "settings": {
         "full_width": true,
@@ -107,6 +96,7 @@
       "blocks": {
         "ai_gen_block_807afa7_XxTyYf": {
           "type": "ai_gen_block_807afa7",
+          "disabled": true,
           "settings": {
             "before_label": "Avant",
             "after_label": "Après",
@@ -164,6 +154,7 @@
     },
     "custom_liquid_KH6aHR": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "Custom Liquid",
       "settings": {
         "full_width": true,
@@ -177,6 +168,7 @@
     },
     "custom_liquid_iCXxAK": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "Custom Liquid",
       "settings": {
         "full_width": true,
@@ -190,6 +182,7 @@
     },
     "custom_liquid_ybGiwC": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "Custom Liquid",
       "settings": {
         "full_width": true,
@@ -327,7 +320,7 @@
       ],
       "settings": {
         "full_width": true,
-        "product": "sac-a-pain-en-cire-dabeille-maison-auralis-format-30-x-40-cm",
+        "product": "sacchetto-per-il-pane-in-cera-dapi-e-cotone-43-33-cm",
         "desktop_media_width": 55,
         "desktop_media_layout": "grid_highlight",
         "mobile_media_size": "contained",
@@ -490,7 +483,6 @@
   "order": [
     "slideshow",
     "custom_liquid_rYBC4J",
-    "custom_liquid_axjydw",
     "custom_liquid_87Jgj6",
     "custom_liquid_ijkEE6",
     "1789819091298878c1",
