@@ -18,7 +18,7 @@
         "full_width": true,
         "remove_vertical_spacing": true,
         "remove_horizontal_spacing": true,
-        "liquid": "{{ 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap' | stylesheet_tag }}\n\n<section class=\"abdg\">\n  <div class=\"abdg__grid\">\n    <div class=\"abdg__card\">\n      <div class=\"abdg__icon\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0941/4010/5040/files/IMG_5029.png?v=1788615596&width=100\" alt=\"Fait à la main\" loading=\"lazy\">\n      </div>\n      <span class=\"abdg__label\">Fait à la main</span>\n    </div>\n    <div class=\"abdg__card\">\n      <div class=\"abdg__icon\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0941/4010/5040/files/IMG_5030.png?v=1788615597&width=100\" alt=\"Qualité supérieure\" loading=\"lazy\">\n      </div>\n      <span class=\"abdg__label\">Qualité supérieure</span>\n    </div>\n    <div class=\"abdg__card\">\n      <div class=\"abdg__icon\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0941/4010/5040/files/IMG_5031.png?v=1788615597&width=100\" alt=\"Garantie 30 jours\" loading=\"lazy\">\n      </div>\n      <span class=\"abdg__label\">Garantie 30 jours</span>\n    </div>\n  </div>\n</section>\n<style>\n.abdg{\n  font-family:'Inter',sans-serif;\n  background:transparent;\n  padding:24px 12px 56px;\n}\n.abdg__grid{\n  max-width:1100px;\n  margin:0 auto;\n  display:grid;\n  grid-template-columns:repeat(3,1fr);\n  gap:14px;\n}\n.abdg__card{\n  display:flex;\n  flex-direction:column;\n  align-items:center;\n  justify-content:center;\n  text-align:center;\n  gap:14px;\n  width:100%;\n  box-sizing:border-box;\n  background:#F8F3EA;\n  border-radius:16px;\n  padding:28px 12px;\n  min-width:0;\n}\n.abdg__icon{\n  flex-shrink:0;\n  width:56px;\n  height:56px;\n  display:flex;\n  align-items:center;\n  justify-content:center;\n}\n.abdg__icon img{\n  width:100%;\n  height:100%;\n  object-fit:contain;\n  display:block;\n}\n.abdg__label{\n  font-size:15px;\n  font-weight:700;\n  color:#2B2118;\n  line-height:1.3;\n}\n@media(max-width:520px){\n  .abdg__grid{gap:10px;}\n  .abdg__card{padding:20px 8px;gap:10px;}\n  .abdg__icon{width:44px;height:44px;}\n  .abdg__label{font-size:13px;}\n}\n</style>",
+        "liquid": "{{ 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap' | stylesheet_tag }}\n\n<section class=\"abdg\">\n  <div class=\"abdg__grid\">\n    <div class=\"abdg__card\">\n      <div class=\"abdg__icon\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0941/4010/5040/files/IMG_5029.png?v=1788615596&width=100\" alt=\"Fatto a mano\" loading=\"lazy\">\n      </div>\n      <span class=\"abdg__label\">Fatto a mano</span>\n    </div>\n    <div class=\"abdg__card\">\n      <div class=\"abdg__icon\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0941/4010/5040/files/IMG_5030.png?v=1788615597&width=100\" alt=\"Qualità superiore\" loading=\"lazy\">\n      </div>\n      <span class=\"abdg__label\">Qualità superiore</span>\n    </div>\n    <div class=\"abdg__card\">\n      <div class=\"abdg__icon\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0941/4010/5040/files/IMG_5031.png?v=1788615597&width=100\" alt=\"Garanzia 30 giorni\" loading=\"lazy\">\n      </div>\n      <span class=\"abdg__label\">Garanzia 30 giorni</span>\n    </div>\n  </div>\n</section>\n<style>\n.abdg{\n  font-family:'Inter',sans-serif;\n  background:transparent;\n  padding:24px 12px 56px;\n}\n.abdg__grid{\n  max-width:1100px;\n  margin:0 auto;\n  display:grid;\n  grid-template-columns:repeat(3,1fr);\n  gap:14px;\n}\n.abdg__card{\n  display:flex;\n  flex-direction:column;\n  align-items:center;\n  justify-content:center;\n  text-align:center;\n  gap:14px;\n  width:100%;\n  box-sizing:border-box;\n  background:#F8F3EA;\n  border-radius:16px;\n  padding:28px 12px;\n  min-width:0;\n}\n.abdg__icon{\n  flex-shrink:0;\n  width:56px;\n  height:56px;\n  display:flex;\n  align-items:center;\n  justify-content:center;\n}\n.abdg__icon img{\n  width:100%;\n  height:100%;\n  object-fit:contain;\n  display:block;\n}\n.abdg__label{\n  font-size:15px;\n  font-weight:700;\n  color:#2B2118;\n  line-height:1.3;\n}\n@media(max-width:520px){\n  .abdg__grid{gap:10px;}\n  .abdg__card{padding:20px 8px;gap:10px;}\n  .abdg__icon{width:44px;height:44px;}\n  .abdg__label{font-size:13px;}\n}\n</style>",
         "background": "",
         "background_gradient": "",
         "text_color": ""
@@ -36,15 +36,15 @@
           "settings": {
             "image_width": 200,
             "heading_size": "h4",
-            "title": "Astuces conservation, recettes anti-gaspi et offres en avant-première. Directement dans votre boîte mail.",
+            "title": "Consigli di conservazione, ricette anti-spreco e offerte in anteprima. Direttamente nella tua casella di posta.",
             "content": ""
           }
         },
         "text_rDzadg": {
           "type": "text",
           "settings": {
-            "title": "Maison Auralis · Qualité Artisanale",
-            "content": "<p>Une question avant de commander ?<br/>contact.maisonauralis@gmail.com<br/>Paiement sécurisé · Livraison offerte · Satisfait ou remboursé 30 jours</p>",
+            "title": "Biolievo · Qualità Artigianale",
+            "content": "<p>Una domanda prima di ordinare?<br/>contact.maisonauralis@gmail.comPagamento sicuro · Spedizione gratuita · Soddisfatti o rimborsati 30 giorni<br/></p>",
             "enable_follow_on_shop": false
           }
         },
@@ -59,8 +59,8 @@
         "text_GPPDxN": {
           "type": "text",
           "settings": {
-            "title": "À propos",
-            "content": "<p>Chez Auralis, on pense que prendre soin de son pain<br/>commence par les bons gestes, pas par les grands discours.<br/>Le sac Auralis est né d'une idée simple : garder le pain<br/>frais, sans plastique, sans compromis. Fabriqué à la main,<br/>cire d'abeille pure. Parce que le vrai geste responsable,<br/>c'est de ne plus jamais jeter ce qu'on aime.</p>",
+            "title": "Chi siamo",
+            "content": "<p>Da Biolievo crediamo che prendersi cura del proprio pane<br/><br/>inizi dai gesti giusti, non dai grandi discorsi.<br/><br/>Il sacchetto Biolievo nasce da un’idea semplice: conservare il pane<br/><br/>con cura, senza plastica, senza compromessi. Fatto a mano,<br/><br/>con cera d’api pura. Perché il vero gesto responsabile<br/><br/>è non buttare mai più ciò che amiamo.</p>",
             "enable_follow_on_shop": false
           }
         },
