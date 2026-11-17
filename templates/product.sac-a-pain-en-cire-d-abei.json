@@ -153,6 +153,7 @@
     },
     "custom_liquid_kHx98h": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "Custom Liquid",
       "settings": {
         "full_width": true,
@@ -171,7 +172,7 @@
         "full_width": true,
         "remove_vertical_spacing": true,
         "remove_horizontal_spacing": true,
-        "liquid": "{{ 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@300;400;500;600&display=swap' | stylesheet_tag }}\n\n<section class=\"aba\">\n  <div class=\"aba__wrap\">\n    <span class=\"aba__eyebrow\">Avant / Après</span>\n    <h2 class=\"aba__title\">\n      Ne le jetez plus.<br>\n      <em>Gardez-le.</em>\n    </h2>\n    <p class=\"aba__caption\"></p>\n  </div>\n</section>\n<style>\n.aba{padding:72px 0 0;font-family:'Inter',sans-serif}\n.aba__wrap{max-width:920px;margin:0 auto;padding:0 20px;text-align:center}\n.aba__eyebrow{display:inline-block;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#C68B3D;font-weight:600;margin-bottom:20px}\n.aba__title{\n  font-family:'Playfair Display',serif !important;\n  font-weight:700;\n  letter-spacing:-.01em;\n  font-size:clamp(24px, 6.2vw, 56px);\n  line-height:1.1;\n  color:#5C3A21;\n  margin:0;\n  white-space:normal;\n}\n.aba__title em{font-style:italic;color:#C68B3D}\n.aba__caption{margin:22px 0 0;font-size:13px;color:#5C3A21;opacity:.75}\n@media(max-width:520px){\n.aba{padding:52px 0 0}\n.aba__wrap{padding:0 18px}\n.aba__caption{font-size:12px;margin-top:18px}\n}\n</style>",
+        "liquid": "{{ 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@300;400;500;600&display=swap' | stylesheet_tag }}\n\n<section class=\"aba\">\n  <div class=\"aba__wrap\">\n    <span class=\"aba__eyebrow\">Prima / Dopo</span>\n    <h2 class=\"aba__title\">\n      Non buttarlo più.<br>\n      <em>Conservalo.</em>\n    </h2>\n    <p class=\"aba__caption\"></p>\n  </div>\n</section>\n<style>\n.aba{padding:72px 0 0;font-family:'Inter',sans-serif}\n.aba__wrap{max-width:920px;margin:0 auto;padding:0 20px;text-align:center}\n.aba__eyebrow{display:inline-block;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#C68B3D;font-weight:600;margin-bottom:20px}\n.aba__title{\n  font-family:'Playfair Display',serif !important;\n  font-weight:700;\n  letter-spacing:-.01em;\n  font-size:clamp(24px, 6.2vw, 56px);\n  line-height:1.1;\n  color:#5C3A21;\n  margin:0;\n  white-space:normal;\n}\n.aba__title em{font-style:italic;color:#C68B3D}\n.aba__caption{margin:22px 0 0;font-size:13px;color:#5C3A21;opacity:.75}\n@media(max-width:520px){\n.aba{padding:52px 0 0}\n.aba__wrap{padding:0 18px}\n.aba__caption{font-size:12px;margin-top:18px}\n}\n</style>",
         "background": "",
         "background_gradient": "",
         "text_color": ""
@@ -183,9 +184,11 @@
         "ai_gen_block_807afa7_76wBGH": {
           "type": "ai_gen_block_807afa7",
           "settings": {
-            "before_label": "Avant",
-            "after_label": "Après",
-            "aria_label": "Comparaison avant et après",
+            "before_image": "shopify://shop_images/IMG_5255.jpg",
+            "after_image": "shopify://shop_images/IMG_5254.jpg",
+            "before_label": "Prima",
+            "after_label": "Prima",
+            "aria_label": "",
             "start_position": 50,
             "desktop_width_percent": 100,
             "border_radius": 16,
