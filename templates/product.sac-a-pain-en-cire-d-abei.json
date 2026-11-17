@@ -111,6 +111,19 @@
         "text_color": ""
       }
     },
+    "custom_liquid_gyLi7n": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": true,
+        "remove_horizontal_spacing": true,
+        "liquid": "{%- assign vid = \"https://cdn.shopify.com/videos/c/o/v/3f3cd5c352874c0daf1795af42325606.mov\" -%}\n\n<link href=\"https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;0,700;1,600;1,700&family=Poppins:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">\n<style>\n.gs{font-family:'Poppins',system-ui,sans-serif;background:#FFFDF8;color:#2B1D12;padding:64px 0}\n.gs-in{max-width:1100px;margin:0 auto;padding:0 20px;display:grid;gap:48px;align-items:center}\n@media(min-width:900px){.gs-in{grid-template-columns:.9fr 1.1fr;gap:64px}}\n.gs-media{position:relative;max-width:520px;width:100%;margin:0 auto}\n.gs-vid{border-radius:22px;overflow:hidden;box-shadow:0 18px 44px rgba(43,29,18,.18);aspect-ratio:4/5;background:#E9DCC4}\n.gs-vid video{display:block;width:100%;height:100%;object-fit:cover}\n.gs-tag{position:absolute;left:22px;bottom:-22px;background:#fff;border-radius:12px;padding:12px 20px 12px 14px;display:flex;align-items:center;gap:12px;box-shadow:0 8px 24px rgba(43,29,18,.14)}\n.gs-tag i{font-style:normal;width:36px;height:36px;border-radius:9px;background:#FBF0D9;display:flex;align-items:center;justify-content:center;font-size:20px;line-height:1}\n.gs-tag b{display:block;font-size:14px;font-weight:600}\n.gs-tag span{font-size:12px;color:#7A6A58;letter-spacing:.03em}\n.gs-pill{display:inline-block;background:#FBEFD9;border-radius:999px;padding:10px 18px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#C68B3D;margin-bottom:22px}\n.gs-h{font-family:'Lora',Georgia,serif;font-weight:700;font-size:clamp(32px,5vw,46px);line-height:1.12;margin:0 0 22px;color:#2B1D12}\n.gs-h em{color:#C68B3D;font-style:italic;display:block}\n.gs-p{font-size:15.5px;line-height:1.75;letter-spacing:.02em;color:#5B4F43;margin:0 0 26px}\n.gs-p b{color:#2B1D12}\n.gs-list{display:grid;gap:12px;margin:0 0 24px;padding:0;list-style:none}\n.gs-card{display:flex;gap:16px;align-items:center;background:#fff;border:1px solid #EADFCB;border-radius:14px;padding:16px 18px}\n.gs-ic{flex:none;width:42px;height:42px;border-radius:10px;background:#FBEFD9;display:flex!important;align-items:center;justify-content:center;font-size:20px!important;line-height:1}\n.gs-card b{display:block;font-size:14.5px;font-weight:600;margin-bottom:3px;color:#2B1D12}\n.gs-card div span{display:block;font-size:13px;line-height:1.5;color:#7A6A58}\n.gs-foot{font-size:14.5px;line-height:1.7;font-style:italic;color:#5B4F43;margin:0}\n.gs-foot b{font-style:normal;color:#2B1D12}\n@media(max-width:899px){.gs{padding:48px 0}.gs-media{margin-bottom:24px}}\n</style>\n\n<section class=\"gs\">\n  <div class=\"gs-in\">\n\n    <div class=\"gs-media\">\n      <div class=\"gs-vid\">\n        {%- if vid != blank -%}\n          <video src=\"{{ vid }}\" autoplay muted loop playsinline preload=\"metadata\"></video>\n        {%- endif -%}\n      </div>\n      <div class=\"gs-tag\"><i>🐝</i><div><b>Cera d'api</b><span>Conservazione naturale</span></div></div>\n    </div>\n\n    <div>\n      <span class=\"gs-pill\">Facile come bere un bicchier d'acqua</span>\n      <h2 class=\"gs-h\">In un solo gesto, <em>semplicemente</em></h2>\n      <p class=\"gs-p\"><b>Infili il pane nel sacchetto</b>, lo richiudi, e basta. La cera d'api fa il resto e crea intorno alla mollica il riparo che all'aria aperta non trova mai. Filone, grande pagnotta a lievitazione naturale, pane in cassetta, dolci da forno: il sacchetto si adatta a tutte le forme e a tutto ciò che ci metti dentro.</p>\n\n      <ul class=\"gs-list\">\n        <li class=\"gs-card\"><span class=\"gs-ic\">🍞</span><div><b>Preserva la morbidezza</b><span>E la giusta croccantezza, giorno dopo giorno.</span></div></li>\n        <li class=\"gs-card\"><span class=\"gs-ic\">🌿</span><div><b>Materiali naturali</b><span>Cotone e cera d'api, senza plastica.</span></div></li>\n        <li class=\"gs-card\"><span class=\"gs-ic\">🍃</span><div><b>Traspirante</b><span>Lascia respirare la crosta senza soffocarla.</span></div></li>\n        <li class=\"gs-card\"><span class=\"gs-ic\">📏</span><div><b>Formato Extra Large</b><span>30 × 40 cm, in cotone di qualità superiore, pensato per durare nel tempo.</span></div></li>\n      </ul>\n\n      <p class=\"gs-foot\">Regala al tuo pane una conservazione davvero artigianale in appena <b>5 secondi al giorno</b>.</p>\n    </div>\n\n  </div>\n</section>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
     "custom_liquid_gz76kh": {
       "type": "custom-liquid",
       "disabled": true,
@@ -376,6 +389,7 @@
   "order": [
     "main",
     "custom_liquid_feJcWU",
+    "custom_liquid_gyLi7n",
     "custom_liquid_gz76kh",
     "custom_liquid_QKcpQi",
     "custom_liquid_kHx98h",
