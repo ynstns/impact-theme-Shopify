@@ -164,6 +164,19 @@
         "text_color": ""
       }
     },
+    "custom_liquid_eBFBYj": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": true,
+        "liquid": "{%- assign img = \"https://cdn.shopify.com/s/files/1/0974/0602/6108/files/IMG_5246.jpg?v=1794947698\" -%}\n\n<link href=\"https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;0,700;1,600;1,700&family=Poppins:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">\n<style>\n.dif{font-family:'Poppins',system-ui,sans-serif;background:#F5ECE0;color:#2B1D12;padding:72px 0}\n.dif-head{max-width:700px;margin:0 auto 48px;padding:0 20px;text-align:center}\n.dif-pill{display:inline-block;background:#fff;border:1px solid #E7DCC9;border-radius:999px;padding:10px 20px;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#B88A3E;margin-bottom:22px}\n.dif-h{font-family:'Lora',Georgia,serif;font-weight:700;font-size:clamp(30px,5vw,46px);line-height:1.15;margin:0 0 14px;color:#2B1D12}\n.dif-h em{color:#C68B3D;font-style:italic}\n.dif-sub{font-size:15px;line-height:1.7;letter-spacing:.02em;color:#5B4F43;margin:0}\n.dif-grid{max-width:1150px;margin:0 auto;padding:0 20px;display:grid;gap:18px}\n@media(min-width:900px){.dif-grid{grid-template-columns:1fr 340px 1fr;gap:34px;align-items:center}.dif-col--r{padding-top:24px}}\n.dif-col{display:grid;gap:18px}\n.dif-card{background:#FFFCF6;border:1px solid #EADFCB;border-radius:18px;padding:24px}\n.dif-top{display:flex;align-items:center;gap:14px;margin-bottom:12px}\n.dif-ic{flex:none;width:42px;height:42px;border-radius:12px;background:#FBEFD9;display:flex;align-items:center;justify-content:center;font-size:20px;line-height:1}\n.dif-card h3{font-family:'Lora',Georgia,serif;font-size:18px;line-height:1.3;font-weight:700;margin:0;color:#2B1D12}\n.dif-card p{font-size:14px;line-height:1.75;letter-spacing:.02em;color:#6B5E50;margin:0}\n.dif-mid{display:flex;flex-direction:column;align-items:center;order:-1}\n@media(min-width:900px){.dif-mid{order:0}}\n.dif-ring{width:min(300px,78vw);aspect-ratio:1;border-radius:50%;padding:10px;background:conic-gradient(#D1AA3B,#EBCF82,#D1AA3B,#C68B3D,#D1AA3B);box-shadow:0 16px 40px rgba(43,29,18,.2)}\n.dif-photo{width:100%;height:100%;border-radius:50%;border:6px solid #fff;overflow:hidden;background:#E9DCC4}\n.dif-photo img{display:block;width:100%;height:100%;object-fit:cover}\n.dif-tag{margin-top:-30px;position:relative;background:#fff;border-radius:12px;padding:11px 20px 11px 14px;display:flex;align-items:center;gap:12px;box-shadow:0 8px 24px rgba(43,29,18,.14)}\n.dif-tag i{font-style:normal;font-size:24px;line-height:1}\n.dif-tag b{display:block;font-size:14px;font-weight:700}\n.dif-tag span{font-size:12px;color:#7A6A58;letter-spacing:.03em}\n@media(max-width:899px){.dif{padding:52px 0}.dif-head{margin-bottom:34px}}\n</style>\n\n<section class=\"dif\">\n  <div class=\"dif-head\">\n    <span class=\"dif-pill\">Perché questo sacchetto</span>\n    <h2 class=\"dif-h\">La differenza <em>Biolievo</em></h2>\n    <p class=\"dif-sub\">Ciò che rende questo sacchetto molto più di un semplice accessorio da cucina.</p>\n  </div>\n\n  <div class=\"dif-grid\">\n\n    <div class=\"dif-col\">\n      <div class=\"dif-card\">\n        <div class=\"dif-top\"><span class=\"dif-ic\">🍞</span><h3>Morbidezza e croccantezza</h3></div>\n        <p>Basta con il pane che indurisce prima ancora di aver finito la pagnotta. La nostra fodera in cera lascia respirare la crosta e aiuta a preservare la morbidezza della mollica. Un oggetto bello e utile allo stesso tempo, pensato per chi ama il buon pane e odia lo spreco.</p>\n      </div>\n      <div class=\"dif-card\">\n        <div class=\"dif-top\"><span class=\"dif-ic\">🎁</span><h3>Un regalo che ogni appassionato adorerà</h3></div>\n        <p>Un indispensabile di design ed ecologico per tutti gli appassionati di panificazione e di pane a lievitazione naturale.</p>\n      </div>\n    </div>\n\n    <div class=\"dif-mid\">\n      <div class=\"dif-ring\"><div class=\"dif-photo\">\n        {%- if img != blank -%}\n          <img src=\"{{ img }}\" alt=\"Sacchetto per il pane Biolievo\" loading=\"lazy\">\n        {%- endif -%}\n      </div></div>\n      <div class=\"dif-tag\"><i>🐝</i><div><b>Biolievo</b><span>Sacchetto per il pane in cera d'api</span></div></div>\n    </div>\n\n    <div class=\"dif-col dif-col--r\">\n      <div class=\"dif-card\">\n        <div class=\"dif-top\"><span class=\"dif-ic\">🍃</span><h3>Una barriera naturale</h3></div>\n        <p>La cera d'api crea intorno al pane una protezione naturale e traspirante, senza plastica. Un sapere antico, riportato nella cucina di oggi.</p>\n      </div>\n      <div class=\"dif-card\">\n        <div class=\"dif-top\"><span class=\"dif-ic\">🌿</span><h3>Puro e autentico</h3></div>\n        <p>Niente plastica. Solo cotone unito a cera d'api, una materia grezza, onesta, che senti al tatto.</p>\n      </div>\n    </div>\n\n  </div>\n</section>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
     "custom_liquid_kHx98h": {
       "type": "custom-liquid",
       "disabled": true,
@@ -410,6 +423,7 @@
     "custom_liquid_gz76kh",
     "custom_liquid_QKcpQi",
     "custom_liquid_EeiFwT",
+    "custom_liquid_eBFBYj",
     "custom_liquid_kHx98h",
     "custom_liquid_gaPJWC",
     "blocks_DfEgh7",
